@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/message.iml" filepath="$PROJECT_DIR$/message.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client/message-client.iml" filepath="$PROJECT_DIR$/client/message-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/message-common.iml" filepath="$PROJECT_DIR$/common/message-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/message-server.iml" filepath="$PROJECT_DIR$/server/message-server.iml" />
+    </modules>
+  </component>
+</project>

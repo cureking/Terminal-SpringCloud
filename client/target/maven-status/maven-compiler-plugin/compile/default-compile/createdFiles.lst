@@ -1,0 +1,8 @@
+com\renewable\terminal\message\client\AudioMessageClient.class
+com\renewable\terminal\message\client\InclinationMessageClient$InclinationMessageClientFallback.class
+com\renewable\terminal\message\client\TerminalMessageClient.class
+com\renewable\terminal\message\client\AudioMessageClient$AudioMessageClientFallback.class
+com\renewable\terminal\message\client\InclinationMessageClient.class
+com\renewable\terminal\message\client\InclinationWarningMessageClient.class
+com\renewable\terminal\message\client\InclinationWarningMessageClient$InclinationWarningMessageClientFallback.class
+com\renewable\terminal\message\client\TerminalMessageClient$TerminalMessageClientFallback.class
