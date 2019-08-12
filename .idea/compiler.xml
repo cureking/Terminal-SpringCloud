@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="audio-client" />
+        <module name="audio-common" />
+        <module name="audio-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="audio" target="1.8" />
+      <module name="audio-client" target="1.8" />
+      <module name="audio-common" target="1.8" />
+      <module name="audio-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

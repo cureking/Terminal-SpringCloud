@@ -1,0 +1,53 @@
+
+spring:
+  application:
+    name: audio
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123
+    url: jdbc:mysql://localhost:3306/audio?characterEncoding=utf-8&useSSL=false
+  redis:
+    #    clusters: 47.92.249.250:6379,47.92.249.250:6380    # Redis集群配置方式
+#    host: "47.92.249.250"
+    host: "localhost"
+    port: 6379
+    jedis:
+      pool:
+        max-active: 20
+        max-idle: 10
+        max-wait: 10000   # 这里有点糊糊的，不知道Duration配置，也不知道单位问题。但是加了这条，确实不会再等待一分钟
+        min-idle: 2
+  main:
+    allow-bean-definition-overriding: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9761/eureka/
+  instance:
+    prefer-ip-address: true
+
+# hystrix配置
+# 即使使用了配置项，对应的方法还是要使用@HystrixCommand注解
+hystrix:
+  command:
+    # default 表示全局的，默认的配置
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+    # 方法名，针对特定的方法
+#    getProductInfoList:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 5000
+
+# 通过feign依赖包含的hystrix-core实现hystrix功能
+feign:
+  hystrix:
+    enabled: true
+
+server:
+  port: 9702
