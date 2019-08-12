@@ -2,6 +2,7 @@ package com.renewable.terminal.vibration.entity;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
@@ -16,6 +17,7 @@ import java.util.Date;
  * @since 2019-08-09
  */
 @Data
+@ToString
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 public class VibrationDevConfig implements Serializable {
