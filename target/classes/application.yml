@@ -1,0 +1,55 @@
+
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9761/eureka/
+  instance:
+    prefer-ip-address: true
+
+#    ����������ת�Ƶ�git��
+# ��ʵzuulҲ������hystrix������zuul�ĳ�ʱҲ������hystrix�ĳ�ʱ���á���������ֱ������hystrix���͵���������zuul�ĳ�ʱ����
+hystrix:
+  command:
+    default:
+      execution:
+        timeout: #���������ִ�У��Ƿ�ᳬʱ
+          enabled: true
+        isolation: #�����ִ�г�ʱʱ��  ��ʱ��ִ�л���
+          thread:
+            timeoutInMilliseconds: 20000  # ��Ӧ�ĳ�ʱʱ�䣬Ĭ����1s����1000ms����������ú���֣�20000�����ã���ʵ��5s���ơ�
+zuul:
+  routes:
+    # ���д�������ֻ��Ҫдpath��serviceId�����
+    product: /myProduct/**
+    myProduct:   # �ô���myProduct���������ʵ�ʶ�û��Ӱ�죨����Ϊ�˿ɶ��ԣ�����д�淶һЩ��
+      path: /myProduct/**
+      serviceId: product
+      sensitiveHeaders:
+      # ZuulProperties��private Set<String> sensitiveHeaders = new LinkedHashSet(Arrays.asList("Cookie", "Set-Cookie", "Authorization"));
+      # ��zuul������Cookie,Set-Coolie,Authorization�������ԣ���������Ϊ�գ���������
+
+
+  # �ų�ĳЩ·�ɣ��������ⲿ�������µ�ַ��patterns�������ʾ��
+  ignored-patterns: # Set��yml����-��ʾ
+    - /product/product/listForOrder
+    - /myProduct/product/listForOrder
+    - /**/product/listForOrder
+management:
+  security:
+#    enabled: false  # �رչ���Ȩ��Ҫ�󣬽������Բ鿴����·�ɵ�
+
+#  management.endpoints.web.exposure.include=bus-refresh
+#  https://www.cnblogs.com/hsz-csy/p/9733259.html
+
+server:
+  port: 9704

@@ -1,0 +1,55 @@
+
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9761/eureka/
+  instance:
+    prefer-ip-address: true
+
+#    下列配置已转移到git上
+# 其实zuul也引用了hystrix依赖，zuul的超时也借用了hystrix的超时设置。所以这里直接配置hystrix，就等于配置了zuul的超时配置
+hystrix:
+  command:
+    default:
+      execution:
+        timeout: #配置命令的执行，是否会超时
+          enabled: true
+        isolation: #命令的执行超时时间  超时将执行回退
+          thread:
+            timeoutInMilliseconds: 20000  # 响应的超时时间，默认是1s，即1000ms。这里的设置很奇怪，20000的设置，其实是5s限制。
+zuul:
+  routes:
+    # 简洁写法（针对只需要写path与serviceId的情况
+    product: /myProduct/**
+    myProduct:   # 该处的myProduct如何命名都实际都没有影响（但是为了可读性，还是写规范一些）
+      path: /myProduct/**
+      serviceId: product
+      sensitiveHeaders:
+      # ZuulProperties中private Set<String> sensitiveHeaders = new LinkedHashSet(Arrays.asList("Cookie", "Set-Cookie", "Authorization"));
+      # 故zuul会拦截Cookie,Set-Coolie,Authorization三个属性，这里设置为空，即不拦截
+
+
+  # 排除某些路由，不允许外部访问以下地址（patterns，正则表示）
+  ignored-patterns: # Set在yml中用-表示
+    - /product/product/listForOrder
+    - /myProduct/product/listForOrder
+    - /**/product/listForOrder
+management:
+  security:
+#    enabled: false  # 关闭管理权限要求，进而可以查看所有路由等
+
+#  management.endpoints.web.exposure.include=bus-refresh
+#  https://www.cnblogs.com/hsz-csy/p/9733259.html
+
+server:
+  port: 9704
