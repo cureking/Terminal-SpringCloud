@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76d38206-6624-4af2-bff7-f18687132928" name="Default Changelist" comment="" />
+    <list default="true" id="76d38206-6624-4af2-bff7-f18687132928" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,24 +28,8 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>17</find>
-      <find>serialPool</find>
-      <find>other</find>
-      <find>NoClean</find>
-      <find>this</find>
-      <find>terminal</find>
-      <find>feign</find>
-      <find>init</find>
-      <find>gua</find>
-      <find>redis</find>
-      <find>orderBy</find>
-      <find>savesaveAndUpload</find>
-      <find>save</find>
-      <find>guava</find>
-      <find>inclinationConfig with</find>
-    </findStrings>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -87,12 +74,14 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="orderBy&#9;PSI&#9;JAVA://com.baomidou.mybatisplus.core.conditions.interfaces.Func#orderBy" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -281,7 +270,7 @@
       <workItem from="1565313989637" duration="7001000" />
       <workItem from="1565337476949" duration="1759000" />
       <workItem from="1565572274912" duration="1320000" />
-      <workItem from="1565573673745" duration="596000" />
+      <workItem from="1565573673745" duration="3596000" />
     </task>
     <servers />
   </component>
@@ -328,6 +317,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
