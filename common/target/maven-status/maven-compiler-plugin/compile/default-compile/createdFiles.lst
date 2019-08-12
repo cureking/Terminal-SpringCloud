@@ -1,0 +1,7 @@
+com\renewable\terminal\terminal\common\TerminalConstant$TerminalStateEnum.class
+com\renewable\terminal\terminal\common\ServerResponse.class
+com\renewable\terminal\terminal\exception\RemoteServiceException.class
+com\renewable\terminal\terminal\entity\Terminal.class
+com\renewable\terminal\terminal\util\JsonUtil.class
+com\renewable\terminal\terminal\common\TerminalConstant.class
+com\renewable\terminal\terminal\common\ResponseCode.class

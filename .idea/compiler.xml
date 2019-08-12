@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="terminal-client" />
+        <module name="terminal-common" />
+        <module name="terminal-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="terminal" target="1.8" />
+      <module name="terminal-client" target="1.8" />
+      <module name="terminal-common" target="1.8" />
+      <module name="terminal-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,15 @@
+com\renewable\terminal\terminal\util\NetIndentificationUtil.class
+com\renewable\terminal\terminal\common\RedisTemplateUtil.class
+com\renewable\terminal\terminal\common\RedisTemplateUtilAll.class
+com\renewable\terminal\terminal\service\impl\TerminalServiceImpl.class
+com\renewable\terminal\terminal\configuration\CodeGenerator$1.class
+com\renewable\terminal\terminal\configuration\CodeGenerator.class
+com\renewable\terminal\terminal\util\SendMqUtil.class
+com\renewable\terminal\terminal\controller\TerminalController.class
+com\renewable\terminal\terminal\dao\TerminalMapper.class
+com\renewable\terminal\terminal\configuration\CodeGenerator$2.class
+com\renewable\terminal\terminal\service\ITerminalService.class
+com\renewable\terminal\terminal\TerminalApplication.class
+com\renewable\terminal\terminal\configuration\MyMetaObjectHandler.class
+com\renewable\terminal\terminal\configuration\MybatisPlusConfig.class
+com\renewable\terminal\terminal\init\TerminalInitialization.class
