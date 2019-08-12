@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/vibration.iml" filepath="$PROJECT_DIR$/vibration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client/vibration-client.iml" filepath="$PROJECT_DIR$/client/vibration-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/vibration-common.iml" filepath="$PROJECT_DIR$/common/vibration-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/vibration-server.iml" filepath="$PROJECT_DIR$/server/vibration-server.iml" />
+    </modules>
+  </component>
+</project>
