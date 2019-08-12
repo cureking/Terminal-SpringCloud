@@ -1,0 +1,43 @@
+
+spring:
+  application:
+    name: schedule
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123
+    url: jdbc:mysql://localhost:3306/inclination?characterEncoding=utf-8&useSSL=false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9761/eureka/
+  instance:
+    prefer-ip-address: true
+
+# hystrix配置
+# 即使使用了配置项，对应的方法还是要使用@HystrixCommand注解
+hystrix:
+  command:
+    # default 表示全局的，默认的配置
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+    # 方法名，针对特定的方法
+#    getProductInfoList:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 5000
+
+# 通过feign依赖包含的hystrix-core实现hystrix功能
+feign:
+  hystrix:
+    enabled: true
+
+# 自定义
+inclination:
+  duration: 10000
+server:
+  port: 9701
