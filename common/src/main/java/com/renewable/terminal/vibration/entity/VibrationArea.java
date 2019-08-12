@@ -20,9 +20,10 @@ import java.util.Date;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class VibrationPeak implements Serializable {
+public class VibrationArea implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+
 
 	/**
 	 * id
@@ -30,13 +31,15 @@ public class VibrationPeak implements Serializable {
 	@TableId(value = "id", type = IdType.AUTO)
 	private Long id;
 
+	private String devConfigId;
+
 	/**
 	 * 数据来源的终端服务器标示
 	 */
 	private String terminalId;
 
 	/**
-	 * 记录数据的来源传感器id（关联sensor_register）
+	 * 设备的id号，系统分配。从0递增
 	 */
 	private Integer devId;
 
@@ -46,7 +49,7 @@ public class VibrationPeak implements Serializable {
 	private Integer passagewayCode;
 
 	/**
-	 * 振动的测量值
+	 * 振动的幅度
 	 */
 	private Float vibratingValue;
 

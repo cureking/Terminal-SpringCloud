@@ -2,8 +2,6 @@ com\renewable\terminal\vibration\constant\DLLConstant.class
 com\renewable\terminal\vibration\extend\VibrationDataDealPool$runnableTaskGenerator.class
 com\renewable\terminal\vibration\dao\VibrationPeakMapper.class
 com\renewable\terminal\vibration\configuration\MybatisPlusConfig.class
-com\renewable\terminal\vibration\entity\VibrationArea.class
-com\renewable\terminal\vibration\entity\VibrationPeak.class
 com\renewable\terminal\vibration\dao\VibrationAreaMapper.class
 com\renewable\terminal\vibration\service\IVibrationAreaService.class
 com\renewable\terminal\vibration\service\impl\VibrationAreaServiceImpl.class
@@ -14,7 +12,6 @@ com\renewable\terminal\vibration\constant\DLLConstant$DllADRanerTypeEnum.class
 com\renewable\terminal\vibration\service\impl\VibrationPeakServiceImpl.class
 com\renewable\terminal\vibration\service\impl\VibrationDLLServiceImpl.class
 com\renewable\terminal\vibration\VibrationApplication.class
-com\renewable\terminal\vibration\entity\VibrationDevConfig.class
 com\renewable\terminal\vibration\configuration\CodeGenerator.class
 com\renewable\terminal\vibration\service\IVibrationDevConfigService.class
 com\renewable\terminal\vibration\extend\VibrationPool$1.class

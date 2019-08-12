@@ -20,7 +20,7 @@ import java.util.List;
  * @since 2019-08-09
  */
 @RestController
-@RequestMapping("/vibration-dev-config/")
+@RequestMapping("/vibration_dev_config/")
 public class VibrationDevConfigController {
 
 	@Autowired
@@ -100,13 +100,37 @@ public class VibrationDevConfigController {
 	}
 
 	/**
-	 * 更新配置
+	 * 更新配置（需要上传中控室）
 	 * @param vibrationDevConfig
 	 * @return
 	 */
 	@PostMapping("update.do")
 	@ResponseBody
 	public ServerResponse updateDevConfig(@RequestBody VibrationDevConfig vibrationDevConfig){
+
+		// 1.数据校验
+		if (vibrationDevConfig == null || vibrationDevConfig.getId() == null){
+			return ServerResponse.createByErrorMessage("vibrationDevConfig is null or its id is null ! vibrationDevConfig:"+vibrationDevConfig);
+		}
+
+		// 2.更新数据
+		boolean result = iVibrationDevConfigService.updateById(vibrationDevConfig);
+		if (!result){
+			return ServerResponse.createByErrorMessage("vibrationDevConfigList save fail !");
+		}
+
+		// 3.返回成功响应
+		return ServerResponse.createBySuccess(vibrationDevConfig);
+	}
+
+	/**
+	 * 更新配置（从中控室获得，不需要再上传中控室）
+	 * @param vibrationDevConfig
+	 * @return
+	 */
+	@PostMapping("update_from_center.do")
+	@ResponseBody
+	public ServerResponse updateDevConfigFromCenter(@RequestBody VibrationDevConfig vibrationDevConfig){
 
 		// 1.数据校验
 		if (vibrationDevConfig == null || vibrationDevConfig.getId() == null){

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2019-08-09
  */
 @RestController
-@RequestMapping("/vibration-peak/")
+@RequestMapping("/vibration_peak/")
 public class VibrationPeakController {
 
 }

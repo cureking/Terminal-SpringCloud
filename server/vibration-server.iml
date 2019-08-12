@@ -201,5 +201,6 @@
     <orderEntry type="library" name="Maven: com.renewable.terminal:message-client:0.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.renewable.terminal:inclination-common:0.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.renewable.terminal:audio-common:0.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="vibration-common" />
   </component>
 </module>

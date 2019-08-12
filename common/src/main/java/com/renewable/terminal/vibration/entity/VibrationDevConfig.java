@@ -25,14 +25,19 @@ public class VibrationDevConfig implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 传感器唯一标识，与硬件的八个通道一一对应（别忘了0与1的问题）
+	 * 传感器唯一标识
 	 */
-	private Integer id;
+	private String id;
 
 	/**
 	 * 终端id
 	 */
 	private String terminalId;
+
+	/**
+	 * 设备的id号，系统分配。从0递增
+	 */
+	private Integer devId;
 
 	/**
 	 * 昵称

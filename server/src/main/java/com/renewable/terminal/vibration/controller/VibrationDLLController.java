@@ -24,7 +24,7 @@ public class VibrationDLLController {
 	 * 注意，该方法的执行间隔不可小于配置中设置的读取长度所需时间
 	 * @return
 	 */
-	@GetMapping("read_ad_continue.do")
+	@GetMapping("read_ad_continue_data.do")
 	@ResponseBody
 	public ServerResponse readAdContinueData() {
 		return iVibrationDLLService.readAdContinueData();

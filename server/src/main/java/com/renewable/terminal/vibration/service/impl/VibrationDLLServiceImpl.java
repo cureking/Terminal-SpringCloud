@@ -44,6 +44,9 @@ public class VibrationDLLServiceImpl implements IVibrationDLLService {
 
 		// 2.针对每个配置去读取读取数据
 		for (VibrationDevConfig vibrationDevConfig : vibrationDevConfigList) {
+			// 数据校验
+			ServerResponse response = CheckDataUtil.checkData(vibrationDevConfig,"terminalId", "devId");
+
 			// 2.1 获取数据
 			ServerResponse<float[]> adContinueResponse = this.readAdContinueDataSingle(vibrationDevConfig);
 			if (adContinueResponse.isFail()) {
@@ -53,8 +56,9 @@ public class VibrationDLLServiceImpl implements IVibrationDLLService {
 
 			// 2.2 处理数据
 			String terminalId = vibrationDevConfig.getTerminalId();
-			int devId = vibrationDevConfig.getId();
-			ServerResponse<List<VibrationArea>> vibrationArrayDealResponse = this.adArrayDeal(terminalId, devId, resultArray);
+			int devId = vibrationDevConfig.getDevId();
+			String devConfigId = vibrationDevConfig.getId();
+			ServerResponse<List<VibrationArea>> vibrationArrayDealResponse = this.adArrayDeal(terminalId, devId, devConfigId, resultArray);
 			if (vibrationArrayDealResponse.isFail()) {
 				return vibrationArrayDealResponse;
 			}
@@ -73,7 +77,7 @@ public class VibrationDLLServiceImpl implements IVibrationDLLService {
 
 	private ServerResponse<float[]> readAdContinueDataSingle(VibrationDevConfig vibrationDevConfig) {
 
-		int devId = vibrationDevConfig.getId();
+		int devId = vibrationDevConfig.getDevId();
 		int oversamplingRate = vibrationDevConfig.getOversamplingRate();
 		int range = vibrationDevConfig.getMeterRange();
 		int samplingFrequency = vibrationDevConfig.getSamplingFrequency();
@@ -89,7 +93,7 @@ public class VibrationDLLServiceImpl implements IVibrationDLLService {
 		return adContinueResponse;
 	}
 
-	private ServerResponse<List<VibrationArea>> adArrayDeal(String terminalId, int devId, float[] originArray) {
+	private ServerResponse<List<VibrationArea>> adArrayDeal(String terminalId, int devId, String devConfigId, float[] originArray) {
 
 		// 1.数据校验
 
@@ -102,6 +106,7 @@ public class VibrationDLLServiceImpl implements IVibrationDLLService {
 
 			VibrationArea vibrationArea = new VibrationArea();
 
+			vibrationArea.setDevConfigId(devConfigId);
 			vibrationArea.setTerminalId(terminalId);
 			vibrationArea.setDevId(devId);
 			vibrationArea.setPassagewayCode(passageWayCode);

@@ -101,11 +101,11 @@
             <artifactId>message-client</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        <!--<dependency>-->
-        <!--<groupId>com.renewable.terminal</groupId>-->
-        <!--<artifactId>inclination-common</artifactId>-->
-        <!--<version>0.0.1-SNAPSHOT</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.renewable.terminal</groupId>
+            <artifactId>vibration-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
