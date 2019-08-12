@@ -4,8 +4,11 @@ C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\
 C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\src\main\java\com\renewable\terminal\message\service\IInclinationProducerService.java
 C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\src\main\java\com\renewable\terminal\message\service\impl\IInclinationConsumerServiceImpl.java
 C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\src\main\java\com\renewable\terminal\message\common\RedisTemplateUtil.java
+C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\src\main\java\com\renewable\terminal\message\controller\VibrationController.java
 C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\src\main\java\com\renewable\terminal\message\service\impl\IAudioProducerServiceImpl.java
 C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\src\main\java\com\renewable\terminal\message\service\impl\ITerminalConsumerServiceImpl.java
+C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\src\main\java\com\renewable\terminal\message\service\impl\IVibrationProducerServiceImpl.java
+C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\src\main\java\com\renewable\terminal\message\service\IVibrationConsumerService.java
 C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\src\main\java\com\renewable\terminal\message\controller\InclinationWarningController.java
 C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\src\main\java\com\renewable\terminal\message\service\ITerminalConsumerService.java
 C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\src\main\java\com\renewable\terminal\message\controller\InclinationController.java
@@ -15,4 +18,6 @@ C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\
 C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\src\main\java\com\renewable\terminal\message\service\ITerminalProducerService.java
 C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\src\main\java\com\renewable\terminal\message\service\IInclinationConsumerService.java
 C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\src\main\java\com\renewable\terminal\message\service\impl\ITerminalProducerServiceImpl.java
+C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\src\main\java\com\renewable\terminal\message\service\IVibrationProducerService.java
+C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\src\main\java\com\renewable\terminal\message\service\impl\IVibrationConsumerServiceImpl.java
 C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\message\server\src\main\java\com\renewable\terminal\message\controller\TerminalController.java

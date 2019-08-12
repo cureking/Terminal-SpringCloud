@@ -20,13 +20,17 @@ spring:
         min-idle: 2
 
   rabbitmq:
-    listener:
-      simple:
-        concurrency: 1
-        max-concurrency: 10
-        acknowledge-mode: manual
-        # ����
-        prefetch: 1
+#    listener:
+#      simple:
+#        concurrency: 1
+#        max-concurrency: 10
+#        acknowledge-mode: manual
+#        # ����
+#        prefetch: 1
+#        # ����
+#        retry:
+#          enabled: true
+#          max-attempts: 3
 #    host: "localhost"
 #    host: "192.168.199.199"
     host: "192.168.199.238"

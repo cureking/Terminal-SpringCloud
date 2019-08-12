@@ -3,10 +3,15 @@ com\renewable\terminal\message\controller\AudioController.class
 com\renewable\terminal\message\service\IAudioProducerService.class
 com\renewable\terminal\message\service\impl\ITerminalProducerServiceImpl.class
 com\renewable\terminal\message\service\ITerminalProducerService.class
+com\renewable\terminal\message\service\impl\IVibrationProducerServiceImpl.class
 com\renewable\terminal\message\MessageApplication.class
+com\renewable\terminal\message\service\impl\IVibrationConsumerServiceImpl.class
 com\renewable\terminal\message\service\IInclinationWarningProducerService.class
+com\renewable\terminal\message\service\IVibrationProducerService.class
 com\renewable\terminal\message\service\impl\ITerminalConsumerServiceImpl.class
 com\renewable\terminal\message\common\RedisTemplateUtil.class
+com\renewable\terminal\message\controller\VibrationController.class
+com\renewable\terminal\message\service\IVibrationConsumerService.class
 com\renewable\terminal\message\service\ITerminalConsumerService.class
 com\renewable\terminal\message\service\impl\IInclinationConsumerServiceImpl.class
 com\renewable\terminal\message\service\IInclinationConsumerService.class
