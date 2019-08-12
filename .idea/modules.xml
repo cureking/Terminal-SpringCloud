@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/inclination.iml" filepath="$PROJECT_DIR$/inclination.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client/inclination-client.iml" filepath="$PROJECT_DIR$/client/inclination-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/inclination-common.iml" filepath="$PROJECT_DIR$/common/inclination-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/inclination-server.iml" filepath="$PROJECT_DIR$/server/inclination-server.iml" />
+    </modules>
+  </component>
+</project>

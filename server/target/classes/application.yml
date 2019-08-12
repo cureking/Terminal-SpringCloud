@@ -1,0 +1,55 @@
+
+spring:
+  application:
+    name: inclination
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123
+    url: jdbc:mysql://localhost:3306/inclination?characterEncoding=utf-8&useSSL=false
+  redis:
+    #    clusters: 47.92.249.250:6379,47.92.249.250:6380    # Redis��Ⱥ���÷�ʽ
+#    host: "47.92.249.250"
+    host: "localhost"
+    port: 6379
+    jedis:
+      pool:
+        max-active: 20
+        max-idle: 10
+        max-wait: 10000   # �����е�����ģ���֪��Duration���ã�Ҳ��֪����λ���⡣���Ǽ���������ȷʵ�����ٵȴ�һ����
+        min-idle: 2
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9761/eureka/
+  instance:
+    prefer-ip-address: true
+
+# hystrix����
+# ��ʹʹ�����������Ӧ�ķ�������Ҫʹ��@HystrixCommandע��
+hystrix:
+  command:
+    # default ��ʾȫ�ֵģ�Ĭ�ϵ�����
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+    # ������������ض��ķ���
+#    getProductInfoList:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 5000
+
+# ͨ��feign����������hystrix-coreʵ��hystrix����
+feign:
+  hystrix:
+    enabled: true
+
+# �Զ���
+inclination:
+  duration: 10000
+
+server:
+  port: 9700

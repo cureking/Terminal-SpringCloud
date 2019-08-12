@@ -1,0 +1,4 @@
+com\renewable\terminal\inclination\entity\InclinationInit.class
+com\renewable\terminal\inclination\entity\InclinationTotal.class
+com\renewable\terminal\inclination\entity\InclinationConfig.class
+com\renewable\terminal\inclination\entity\InclinationWarning.class

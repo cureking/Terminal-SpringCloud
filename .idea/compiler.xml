@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="inclination-server" />
+        <module name="inclination-common" />
+        <module name="inclination-client" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="inclination" target="1.8" />
+      <module name="inclination-client" target="1.8" />
+      <module name="inclination-common" target="1.8" />
+      <module name="inclination-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="inclination-client" options="-parameters" />
+      <module name="inclination-common" options="-parameters" />
+      <module name="inclination-server" options="-parameters" />
+    </option>
+  </component>
+</project>

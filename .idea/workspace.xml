@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="76d38206-6624-4af2-bff7-f18687132928" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="inclination" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>17</find>
+      <find>serialPool</find>
+      <find>other</find>
+      <find>NoClean</find>
+      <find>this</find>
+      <find>terminal</find>
+      <find>feign</find>
+      <find>init</find>
+      <find>gua</find>
+      <find>redis</find>
+      <find>orderBy</find>
+      <find>savesaveAndUpload</find>
+      <find>save</find>
+      <find>guava</find>
+      <find>inclinationConfig with</find>
+    </findStrings>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1PIr5S9Qgb8elAr7BCbWrxHpmuE" />
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>ArquillianJava</id>
+          </State>
+          <State>
+            <id>GeneralJava</id>
+          </State>
+          <State>
+            <id>InternationalizationJava</id>
+          </State>
+          <State>
+            <id>JUnitJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Kotlin</id>
+          </State>
+          <State>
+            <id>TestNGJava</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Ali-Check</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SearchEverywhereHistoryKey" value="orderBy&#9;PSI&#9;JAVA://com.baomidou.mybatisplus.core.conditions.interfaces.Func#orderBy" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565336990805" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.renewable.terminal.inclination.util" />
+      <recent name="com.renewable.terminal.inclination.service.impl" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\inclination\server\src\main\java\com\renewable\terminal\inclination\service\impl" />
+      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\inclination\server\src\main\java\com\renewable\terminal\inclination\service" />
+      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\inclination\server\src\main\java\com\renewable\terminal\inclination\dao" />
+      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\inclination\server\src\main\java\com\renewable\terminal\inclination\entity" />
+      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\inclination\server\src\main\java\com\renewable\terminal\inclination" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.renewable.terminal.inclination.extend.converter.impl" />
+      <recent name="com.renewable.terminal.inclination.entity" />
+      <recent name="com.renewable.terminal.inclination.aspect" />
+      <recent name="com.renewable.terminal.inclination.annotation" />
+      <recent name="com.renewable.terminal.inclination.configuration" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\inclination\server\src\main\resources\mapper" />
+      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\inclination\server\src\main\resources" />
+      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\inclination\server\src\main\java\com\renewable\terminal\inclination\controller" />
+      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\inclination\server\src\main\java\com\renewable\terminal\inclination" />
+      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\inclination" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.renewable.terminal.inclination.service.impl" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.InclinationApplication">
+    <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.renewable.terminal.inclination.configuration.CodeGenerator" />
+      <module name="inclination-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.renewable.terminal.inclination.configuration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ISerialCommandSendServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.renewable.terminal.inclination.service.impl.ISerialCommandSendServiceImpl" />
+      <module name="inclination-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.renewable.terminal.inclination.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SerialPool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.renewable.terminal.inclination.extend.SerialPool" />
+      <module name="inclination-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.renewable.terminal.inclination.extend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckDataUtilTest.checkDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="inclination-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.renewable.terminal.inclination.extend.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.renewable.terminal.inclination.util" />
+      <option name="MAIN_CLASS_NAME" value="com.renewable.terminal.inclination.util.CheckDataUtilTest" />
+      <option name="METHOD_NAME" value="checkDataTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InclinationApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="inclination-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.renewable.terminal.inclination.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.renewable.terminal.inclination" />
+      <option name="MAIN_CLASS_NAME" value="com.renewable.terminal.inclination.InclinationApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InclinationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="inclination-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.renewable.terminal.inclination.InclinationApplication" />
+      <option name="VM_PARAMETERS" value="-Dserver.port=9700" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.CodeGenerator" />
+      <item itemvalue="Application.SerialPool" />
+      <item itemvalue="Application.ISerialCommandSendServiceImpl" />
+      <item itemvalue="JUnit.CheckDataUtilTest.checkDataTest" />
+      <item itemvalue="JUnit.InclinationApplicationTests" />
+      <item itemvalue="Spring Boot.InclinationApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CodeGenerator" />
+        <item itemvalue="JUnit.InclinationApplicationTests" />
+        <item itemvalue="JUnit.CheckDataUtilTest.checkDataTest" />
+        <item itemvalue="Application.ISerialCommandSendServiceImpl" />
+        <item itemvalue="Application.SerialPool" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76d38206-6624-4af2-bff7-f18687132928" name="Default Changelist" comment="" />
+      <created>1563766711681</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1563766711681</updated>
+      <workItem from="1563766717720" duration="56874000" />
+      <workItem from="1563948427251" duration="546000" />
+      <workItem from="1563949327186" duration="20619000" />
+      <workItem from="1564025091060" duration="3966000" />
+      <workItem from="1564033124816" duration="11862000" />
+      <workItem from="1564118282318" duration="9882000" />
+      <workItem from="1564449917989" duration="6460000" />
+      <workItem from="1564471443853" duration="3079000" />
+      <workItem from="1564537865477" duration="945000" />
+      <workItem from="1564561523368" duration="2481000" />
+      <workItem from="1564566027868" duration="4622000" />
+      <workItem from="1564622017476" duration="590000" />
+      <workItem from="1564625566206" duration="549000" />
+      <workItem from="1564627916346" duration="2960000" />
+      <workItem from="1564651773812" duration="22000" />
+      <workItem from="1564733107374" duration="6000" />
+      <workItem from="1564734121555" duration="2989000" />
+      <workItem from="1564896893419" duration="4073000" />
+      <workItem from="1564969487280" duration="5234000" />
+      <workItem from="1565313989637" duration="7001000" />
+      <workItem from="1565337476949" duration="1759000" />
+      <workItem from="1565572274912" duration="1320000" />
+      <workItem from="1565573673745" duration="596000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="InclinationApplicationTests_contextLoads - 2019.07.22 at 17h 04m 56s.xml">
+      <configuration name="InclinationApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InclinationApplicationTests - 2019.07.22 at 17h 05m 31s.xml">
+      <configuration name="InclinationApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InclinationApplicationTests_contextLoads - 2019.07.22 at 17h 05m 39s.xml">
+      <configuration name="InclinationApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InclinationApplicationTests_contextLoads - 2019.07.22 at 17h 10m 02s.xml">
+      <configuration name="InclinationApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CheckDataUtilTest_checkDataTest - 2019.07.24 at 13h 57m 42s.xml">
+      <configuration name="CheckDataUtilTest.checkDataTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CheckDataUtilTest_checkDataTest - 2019.07.24 at 13h 58m 28s.xml">
+      <configuration name="CheckDataUtilTest.checkDataTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CheckDataUtilTest_checkDataTest - 2019.07.24 at 14h 08m 50s.xml">
+      <configuration name="CheckDataUtilTest.checkDataTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CheckDataUtilTest_checkDataTest - 2019.07.24 at 14h 25m 59s.xml">
+      <configuration name="CheckDataUtilTest.checkDataTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InclinationApplicationTests - 2019.07.24 at 14h 29m 10s.xml">
+      <configuration name="InclinationApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InclinationApplicationTests - 2019.07.24 at 15h 20m 03s.xml">
+      <configuration name="InclinationApplicationTests" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="origin2CommandStrategyMap.get(command2OriginBeanName)" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>inclination-server</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
