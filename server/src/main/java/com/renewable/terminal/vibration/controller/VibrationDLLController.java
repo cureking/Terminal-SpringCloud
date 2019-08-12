@@ -19,9 +19,14 @@ public class VibrationDLLController {
 	@Autowired
 	private IVibrationDLLService iVibrationDLLService;
 
-	@GetMapping("test.do")
+	/**
+	 * 根据数据库中的配置列表，执行所有读取
+	 * 注意，该方法的执行间隔不可小于配置中设置的读取长度所需时间
+	 * @return
+	 */
+	@GetMapping("read_ad_continue.do")
 	@ResponseBody
-	public ServerResponse test() {
+	public ServerResponse readAdContinueData() {
 		return iVibrationDLLService.readAdContinueData();
 	}
 }

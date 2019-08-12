@@ -1,6 +1,7 @@
 package com.renewable.terminal.vibration.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.renewable.terminal.terminal.common.ServerResponse;
 import com.renewable.terminal.vibration.entity.VibrationArea;
 
 /**
@@ -13,4 +14,5 @@ import com.renewable.terminal.vibration.entity.VibrationArea;
  */
 public interface IVibrationAreaService extends IService<VibrationArea> {
 
+	ServerResponse listByTimeWithCount(Integer devId, Integer passagewayCode, Integer count, String startTime, String endTime);
 }
