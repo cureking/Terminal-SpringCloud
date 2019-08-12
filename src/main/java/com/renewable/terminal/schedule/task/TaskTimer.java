@@ -3,6 +3,7 @@ package com.renewable.terminal.schedule.task;
 import com.renewable.terminal.audio.client.AudioClient;
 import com.renewable.terminal.inclination.client.InclinationClient;
 import com.renewable.terminal.terminal.common.ServerResponse;
+import com.renewable.terminal.vibration.client.VibrationClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -18,6 +19,9 @@ public class TaskTimer {
 
 	@Autowired
 	private AudioClient audioClient;
+
+	@Autowired
+	private VibrationClient vibrationClient;
 
 	// Inclination Part:
 
@@ -79,6 +83,19 @@ public class TaskTimer {
 		log.info("Status:{},Msg:{}.", response.getStatus(), response.getMsg());
 
 		log.info("audioListenerTask task end");
+
+	}
+
+	@Async
+//	@Scheduled(cron = "0 * */6 * * *")	// 每六个小时
+	@Scheduled(cron = "0 */5 * * * *")	// 每五分钟
+	public void vibrationReadAdContinueData() {
+		log.info("vibration/ReadAdContinueDataTask task start");
+
+		ServerResponse response = vibrationClient.readAdContinueData();
+		log.info("Status:{},Msg:{}.", response.getStatus(), response.getMsg());
+
+		log.info("vibration/ReadAdContinueDataTask task end");
 
 	}
 }

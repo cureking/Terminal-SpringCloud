@@ -65,6 +65,11 @@
             <artifactId>audio-client</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.renewable.terminal</groupId>
+            <artifactId>vibration-client</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>

@@ -10,7 +10,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 @EnableScheduling
 @EnableEurekaClient
-@EnableFeignClients(basePackages = {"com.renewable.terminal.inclination.client","com.renewable.terminal.audio.client"})
+@EnableFeignClients(basePackages = {"com.renewable.terminal.inclination.client","com.renewable.terminal.audio.client","com.renewable.terminal.vibration.client"})
 @ComponentScan(basePackages = "com.renewable.terminal")
 public class ScheduleApplication {
 
