@@ -33,12 +33,12 @@ public class SerialController {
 	}
 
 	// 理由同上，如果需要，这里可以增加一个直接发送指令到硬件的接口，而不走数据库
-//	@GetMapping("read_all.do")
-//	@ResponseBody
-//	public ServerResponse readAll() {
-//		return iSerialCommandSendService.readAll();
-//	}
-//
+	@GetMapping("read_all.do")
+	@ResponseBody
+	public ServerResponse readAll() {
+		return iSerialCommandSendService.readAll();
+	}
+
 
 	// 下列都是在系统进行正常数据采集前，乃至相关配置初始化前的一个操作：进行底层传感器硬件设置
 

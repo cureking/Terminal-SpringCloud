@@ -159,6 +159,18 @@ public class InclinationOriginServiceImpl extends ServiceImpl<InclinationOriginM
 		}
 	}
 
+//	@Override
+//	public ServerResponse testDeal(Double x, Double y, Double ix, Double iy, Double totalangle) {
+//		/**
+//		 * 测试接口 测试算法3
+//		 */
+//		//开始算法三的计算          //InclinationConst.InclinationInstallModeEnum.FOUR
+//		double[] resultTDInitArray1 = this.calInitAngleTotal(x, y, ix, iy, totalangle, InclinationConfigConstant.InclinationInstallModeEnum.codeOf(1));
+//		return ServerResponse.createBySuccess(resultTDInitArray1);
+//	}
+
+
+	// 计算初始倾斜角。默认的安装模式是1，安装角度为0
 	private double[] calAngleTotal(double angleX, double angleY) {
 		double[] angleTotal = null;
 
@@ -170,7 +182,8 @@ public class InclinationOriginServiceImpl extends ServiceImpl<InclinationOriginM
 		return angleTotal;
 	}
 
-	private double[] calInitAngleTotal(double angleX, double angleY, double X, double Y, double angleInitTotal, InclinationConfigConstant.InclinationInstallModeEnum installModeEnum) {
+	private double[] calInitAngleTotal(double angleX, double angleY, double X, double Y, double angleInitTotal,
+									   InclinationConfigConstant.InclinationInstallModeEnum installModeEnum) {
 		return OtherUtil.calInitAngleTotal(angleX, angleY, X, Y, angleInitTotal, installModeEnum);
 
 	}

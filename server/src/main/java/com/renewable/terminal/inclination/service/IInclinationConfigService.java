@@ -14,4 +14,17 @@ import com.renewable.terminal.terminal.common.ServerResponse;
  */
 public interface IInclinationConfigService extends IService<InclinationConfig> {
 
+	/**
+	 * 计算incliation的X与Y
+	 * @param inclinationConfig
+	 * @return
+	 */
+	ServerResponse<InclinationConfig> calXAndY(InclinationConfig inclinationConfig);
+
+	/**
+	 * 通过matlab，计算incliation的X与Y
+	 * @param inclinationConfig
+	 * @return
+	 */
+	ServerResponse<InclinationConfig> calInitWithMatlab(InclinationConfig inclinationConfig);
 }

@@ -56,6 +56,10 @@ public class InclinationConfig implements Serializable {
 
 	private Integer model;
 
+	/**
+	 * 虽然写的是置零操作
+	 * 但是少了一个安装方位角
+	 */
 	private Integer zero;
 
 	/**
@@ -101,13 +105,25 @@ public class InclinationConfig implements Serializable {
 
 	/**
 	 * 初始算法的中间变量x，即传感器倾斜角向量于X方向上的分解
+	 * 现保存的是修正值x
 	 */
 	private Double initX;
 
 	/**
 	 * 初始算法的中间变量y，即传感器倾斜角向量于Y方向上的分解
+	 * 现保存的是修正值y
 	 */
 	private Double initY;
+
+	/**\
+	 * 安装方位角
+	 */
+	private Double installAngle;
+
+	/**\
+	 * 安装模式（1.1，1.2，2.1，2.2）
+	 */
+	private Double installModel;
 
 	/**
 	 * 状态

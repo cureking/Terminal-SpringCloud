@@ -255,14 +255,14 @@ public class OtherUtil {
 												 double angle1, double angle2, double angle3, double angle4) {
 		double[][] resultArray = new double[4][2];
 
-		resultArray[0][0] = h1;
-		resultArray[1][0] = h1;
-		resultArray[2][0] = h1;
-		resultArray[3][0] = h1;
-		resultArray[0][1] = angle1;
-		resultArray[1][1] = angle1;
-		resultArray[2][1] = angle1;
-		resultArray[3][1] = angle1;
+		resultArray[0][0] = angle1;
+		resultArray[1][0] = angle2;
+		resultArray[2][0] = angle3;
+		resultArray[3][0] = angle4;
+		resultArray[0][1] = h1;
+		resultArray[1][1] = h2;
+		resultArray[2][1] = h3;
+		resultArray[3][1] = h4;
 
 		return resultArray;
 	}

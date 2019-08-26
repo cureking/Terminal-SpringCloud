@@ -2,8 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76d38206-6624-4af2-bff7-f18687132928" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_matlab_runtime_javabuilder_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_renewable_terminal_vibration_common_0_0_1_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/entity/InclinationInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/entity/InclinationTotal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/entity/InclinationWarning.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/util/CommandReceiveConvertUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/util/CommandSendConvertUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/util/MatlabUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/inclination-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/server/inclination-server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/controller/InclinationConfigController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/controller/InclinationConfigController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/controller/SerialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/controller/SerialController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/entity/InclinationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/entity/InclinationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/util/CommandReceiveConvertUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/util/CommandReceiveConvertUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/IInclinationConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/IInclinationConfigService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/impl/InclinationConfigServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/impl/InclinationConfigServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/impl/InclinationOriginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/impl/InclinationOriginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/util/OtherUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/util/OtherUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/inclination-server-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/inclination-server-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +60,9 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="1PIr5S9Qgb8elAr7BCbWrxHpmuE" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -74,8 +100,11 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -88,6 +117,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565336990805" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="C:/sinfit.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -111,11 +141,11 @@
       <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\inclination\server\src\main\java\com\renewable\terminal\inclination" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.renewable.terminal.inclination.util" />
       <recent name="com.renewable.terminal.inclination.extend.converter.impl" />
       <recent name="com.renewable.terminal.inclination.entity" />
       <recent name="com.renewable.terminal.inclination.aspect" />
       <recent name="com.renewable.terminal.inclination.annotation" />
-      <recent name="com.renewable.terminal.inclination.configuration" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\inclination\server\src\main\resources\mapper" />
@@ -270,7 +300,18 @@
       <workItem from="1565313989637" duration="7001000" />
       <workItem from="1565337476949" duration="1759000" />
       <workItem from="1565572274912" duration="1320000" />
-      <workItem from="1565573673745" duration="3596000" />
+      <workItem from="1565573673745" duration="8479000" />
+      <workItem from="1565602933116" duration="6754000" />
+      <workItem from="1565760970664" duration="598000" />
+      <workItem from="1566271569166" duration="5101000" />
+      <workItem from="1566355624527" duration="3428000" />
+      <workItem from="1566373014988" duration="2017000" />
+      <workItem from="1566378116265" duration="2188000" />
+      <workItem from="1566380749185" duration="8257000" />
+      <workItem from="1566444430844" duration="3582000" />
+      <workItem from="1566450410042" duration="5570000" />
+      <workItem from="1566456977932" duration="9156000" />
+      <workItem from="1566782103818" duration="1227000" />
     </task>
     <servers />
   </component>
@@ -323,92 +364,31 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/converter/impl/Origin2Command526T.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="origin2CommandStrategyMap.get(command2OriginBeanName)" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>inclination-server</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

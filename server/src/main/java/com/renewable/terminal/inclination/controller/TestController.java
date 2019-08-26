@@ -1,5 +1,7 @@
 package com.renewable.terminal.inclination.controller;
 
+import com.renewable.terminal.inclination.entity.InclinationConfig;
+import com.renewable.terminal.inclination.service.IInclinationConfigService;
 import com.renewable.terminal.inclination.service.ISerialCommandSendService;
 import com.renewable.terminal.terminal.client.TerminalClient;
 import com.renewable.terminal.terminal.common.ServerResponse;
@@ -23,6 +25,9 @@ public class TestController {
 
 	@Autowired
 	private ISerialCommandSendService iSerialCommandSendService;
+
+	@Autowired
+	private IInclinationConfigService iInclinationConfigService;
 
 	@Value("${inclination.duration}")
 	private String duration;
@@ -63,5 +68,23 @@ public class TestController {
 		return iSerialCommandSendService.readAll();
 	}
 
+	@PostMapping("config.do")
+	@ResponseBody
+	public ServerResponse config(@RequestBody InclinationConfig inclinationConfig){
+		System.out.println(inclinationConfig);
+		return iInclinationConfigService.calXAndY(inclinationConfig);
+	}
+
+	@PostMapping("config_s.do")
+	@ResponseBody
+	public ServerResponse configS(@RequestBody InclinationConfig inclinationConfig){
+		return iInclinationConfigService.calInitWithMatlab(inclinationConfig);
+	}
+
+	@GetMapping("index.do")
+	@ResponseBody
+	public String index(){
+		return "index";
+	}
 
 }

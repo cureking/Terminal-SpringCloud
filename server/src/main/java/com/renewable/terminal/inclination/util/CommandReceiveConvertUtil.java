@@ -1,6 +1,4 @@
-package com.renewable.terminal.inclination.extend.util;
-
-import com.renewable.terminal.inclination.util.HexUtil;
+package com.renewable.terminal.inclination.util;
 
 /**
  * @Description：
@@ -20,39 +18,19 @@ public class CommandReceiveConvertUtil {
 	 * @return 返回数据域中每个数据组成的数组
 	 */
 	public static double[] originData2Object(int dataAreaStart, int dataAreaSingleDataLength, int dataAreaSingleDataCount, int integerLength, int decimalLength, byte[] originData) {
+//		int signedCound = 1;
+//		int integerCount = 2;
+//		int decimalCount = 3;
+//
+//		int dataAreaStart = 4;
+//		int dataAreaSingleDataLength = 3;
+//		int dataAreaSingleDataCount = 3;
 
 		double[] dataAreaArray = new double[dataAreaSingleDataCount];
 		for (int i = 0; i < dataAreaSingleDataCount; i++) {
 			dataAreaArray[i] = origin2Double(integerLength, decimalLength, subBytes(originData, dataAreaStart, dataAreaSingleDataLength));
 		}
 
-		return dataAreaArray;
-	}
-
-	/**
-	 * 获取对应数据域中，数据域中数据的解析，并以数组的方式返回
-	 * 表示光速打脸啊。刚说一般情况下数据域的数据都是长度一样的，立马来了一个不一样的。。。不过也算把代码优化得更具扩展性了
-	 * @param originData 原始数据数组
-	 * @param dataAreaStart 数组中数据域的开始位置
-	 * @param dataAreaFormat 数据域中数据的格式。如dataAreayFormat = [[2,4],[2,4],[2,2]]表示输出结果数组由三个数A,B,C组成。A与B的整数位有2位，小数位有4位，而C的整数位有2位，小数位有2位
-	 * @return
-	 */
-	public static double[] originData2Object(byte[] originData, int dataAreaStart, int[][] dataAreaFormat){
-		double[] dataAreaArray = new double[dataAreaFormat.length];
-		int subDataStart = dataAreaStart;
-		int subDataLength = 0;
-		for (int i = 0; i < dataAreaArray.length; i++){
-
-			// 计算出数据域中每个数据在originArray中的起点位置
-			if (i != 0){
-				subDataStart = subDataStart + subDataLength;
-			}
-
-			// 计算出当前计算的数据的数据长度（最后千万别忘了每个数据都有一个符号位，需要占据一个位置）
-			// 后面发现其实数组中的一位是协议中的两位，所以这里长度需要除以2
-			subDataLength = (dataAreaFormat[i][0] + dataAreaFormat[i][1] + 1)/2;
-			dataAreaArray[i] = origin2Double(dataAreaFormat[i][0],dataAreaFormat[i][1], subBytes(originData, subDataStart, subDataLength));
-		}
 		return dataAreaArray;
 	}
 

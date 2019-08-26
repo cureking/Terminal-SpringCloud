@@ -3,6 +3,7 @@ package com.renewable.terminal.inclination.controller;
 
 import com.renewable.terminal.inclination.entity.InclinationConfig;
 import com.renewable.terminal.inclination.service.IInclinationConfigService;
+import com.renewable.terminal.inclination.util.MatlabUtil;
 import com.renewable.terminal.message.client.InclinationMessageClient;
 import com.renewable.terminal.terminal.common.ServerResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,11 +39,18 @@ public class InclinationConfigController {
 		if (inclinationConfig == null || inclinationConfig.getAddress() == null){
 			return ServerResponse.createByErrorMessage("inclinationConfig is null or its address is null !");
 		}
-		if (iInclinationConfigService.getById(inclinationConfig.getAddress()) != null){
+		// 计算inclinationConfig的X和Y
+//		ServerResponse<InclinationConfig> response = iInclinationConfigService.calXAndY(inclinationConfig);
+		ServerResponse<InclinationConfig> response = iInclinationConfigService.calInitWithMatlab(inclinationConfig);
+		if (response.isFail()){
+			return response;
+		}
+		InclinationConfig inclinationConfigCalXAndY = response.getData();
+		if (iInclinationConfigService.getById(inclinationConfigCalXAndY.getAddress()) != null){
 			return ServerResponse.createByErrorMessage("duplicate the primary key:inclinationConfig.address !");
 		}
 
-		boolean result = iInclinationConfigService.save(inclinationConfig);
+		boolean result = iInclinationConfigService.save(inclinationConfigCalXAndY);
 		if (!result) {
 			return ServerResponse.createByErrorMessage("fail !");
 		}
@@ -75,21 +83,36 @@ public class InclinationConfigController {
 	@PostMapping("update_by_id.do")
 	@ResponseBody
 	public ServerResponse updateConfig(@RequestBody InclinationConfig inclinationConfig) {
-		boolean result = iInclinationConfigService.updateById(inclinationConfig);
+		// 计算inclinationConfig的X和Y
+//		ServerResponse<InclinationConfig> response = iInclinationConfigService.calXAndY(inclinationConfig);
+		ServerResponse<InclinationConfig> response = iInclinationConfigService.calInitWithMatlab(inclinationConfig);
+		if (response.isFail()){
+			return response;
+		}
+		InclinationConfig inclinationConfigCalXAndY = response.getData();
+		boolean result = iInclinationConfigService.updateById(inclinationConfigCalXAndY);
 		if (!result) {
 			return ServerResponse.createByErrorMessage("fail !");
 		}
 
 		// 4.上传中控室
-		List<InclinationConfig> inclinationConfigList = Arrays.asList(inclinationConfig);
-		inclinationMessageClient.uploadConfigList(inclinationConfigList);
+		inclinationMessageClient.uploadConfig(inclinationConfig);
 		return ServerResponse.createBySuccessMessage("success");
 	}
 
 	@PostMapping("update_from_center.do")
 	@ResponseBody
 	public ServerResponse updateConfigFromCenter(@RequestBody InclinationConfig inclinationConfig) {
-		boolean result = iInclinationConfigService.updateById(inclinationConfig);
+		// 即使是中控室下发的数据，也需要计算X与Y（防止中控室没有进行相关操作）
+		// 计算inclinationConfig的X和Y
+//		ServerResponse<InclinationConfig> response = iInclinationConfigService.calXAndY(inclinationConfig);
+		ServerResponse<InclinationConfig> response = iInclinationConfigService.calInitWithMatlab(inclinationConfig);
+		if (response.isFail()){
+			return response;
+		}
+		InclinationConfig inclinationConfigCalXAndY = response.getData();
+		boolean result = iInclinationConfigService.updateById(inclinationConfigCalXAndY);
+
 		if (!result) {
 			return ServerResponse.createByErrorMessage("fail !");
 		}
