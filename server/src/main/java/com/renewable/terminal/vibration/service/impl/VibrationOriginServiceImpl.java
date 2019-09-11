@@ -5,9 +5,9 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.google.common.collect.Lists;
 import com.renewable.terminal.terminal.common.ServerResponse;
-import com.renewable.terminal.vibration.dao.VibrationAreaMapper;
-import com.renewable.terminal.vibration.entity.VibrationArea;
-import com.renewable.terminal.vibration.service.IVibrationAreaService;
+import com.renewable.terminal.vibration.dao.VibrationOriginMapper;
+import com.renewable.terminal.vibration.entity.VibrationOrigin;
+import com.renewable.terminal.vibration.service.IVibrationOriginService;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
@@ -22,7 +22,7 @@ import java.util.List;
  * @since 2019-08-09
  */
 @Service
-public class VibrationAreaServiceImpl extends ServiceImpl<VibrationAreaMapper, VibrationArea> implements IVibrationAreaService {
+public class VibrationOriginServiceImpl extends ServiceImpl<VibrationOriginMapper, VibrationOrigin> implements IVibrationOriginService {
 
 	@Override
 	public ServerResponse listByTimeWithCount(Integer devId, Integer passagewayCode, Integer countRequest, String startTime, String endTime) {
@@ -40,14 +40,14 @@ public class VibrationAreaServiceImpl extends ServiceImpl<VibrationAreaMapper, V
 		int countpace = countTotal / countRequest;
 
 		// 2.x 获取在指定日期内的第一个数据
-		Wrapper<VibrationArea> vibrationAreaWrapper = new QueryWrapper<VibrationArea>().between("create_time", startTime, endTime).last("LIMIT 1");
-		VibrationArea vibrationAreaStart = this.getOne(vibrationAreaWrapper);
-		if (vibrationAreaStart == null) {
+		Wrapper<VibrationOrigin> vibrationAreaWrapper = new QueryWrapper<VibrationOrigin>().between("create_time", startTime, endTime).last("LIMIT 1");
+		VibrationOrigin vibrationOriginStart = this.getOne(vibrationAreaWrapper);
+		if (vibrationOriginStart == null) {
 			return ServerResponse.createByErrorMessage("vibrationAreaStart is null With the startTime: " + startTime + "and endTime:" + endTime + " !");
 		}
 
 		// 2.y 获得指定日期内第一个数据的ID
-		long idStart = vibrationAreaStart.getId();
+		long idStart = vibrationOriginStart.getId();
 		List<Long> idList = Lists.newArrayList();
 
 		// 2.z 组装所求的ID集合
@@ -56,12 +56,12 @@ public class VibrationAreaServiceImpl extends ServiceImpl<VibrationAreaMapper, V
 		}
 
 		// 3.请求指定ID集合的数据
-		List<VibrationArea> vibrationAreaList = (List<VibrationArea>) this.listByIds(idList);
-		if (CollectionUtils.isEmpty(vibrationAreaList)) {
+		List<VibrationOrigin> vibrationOriginList = (List<VibrationOrigin>) this.listByIds(idList);
+		if (CollectionUtils.isEmpty(vibrationOriginList)) {
 			return ServerResponse.createByErrorMessage("vibrationAreaList is null or vibrationAreaList's size is zero !");
 		}
 
 		// 4.返回成功响应
-		return ServerResponse.createBySuccess(vibrationAreaList);
+		return ServerResponse.createBySuccess(vibrationOriginList);
 	}
 }

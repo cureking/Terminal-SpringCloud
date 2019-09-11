@@ -1,6 +1,6 @@
 package com.renewable.terminal.vibration.extend;
 
-import com.renewable.terminal.vibration.entity.VibrationArea;
+import com.renewable.terminal.vibration.entity.VibrationOrigin;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -17,7 +17,7 @@ public class VibrationDataDealPool {
 
 
 	// 参照享元模式，建立多个可以重复利用对象。 单例容器
-	private static List<VibrationArea> vibrationAreaList;
+	private static List<VibrationOrigin> vibrationOriginList;
 
 	// 建立线程池	// 这里可以选择直接new，也可以直接注入（注入的VibrationPool，默认是10.100
 	private static VibrationPool vibrationPool = new VibrationPool(10, 100);

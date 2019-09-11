@@ -75,7 +75,6 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.antlr:antlr-runtime:3.4" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.antlr:stringtemplate:3.2.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: antlr:antlr:2.7.7" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: com.google.code.gson:gson:2.8.5" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.commons:commons-math:2.2" level="project" />
     <orderEntry type="library" name="Maven: com.netflix.archaius:archaius-core:0.7.6" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: javax.ws.rs:jsr311-api:1.1.1" level="project" />
@@ -196,11 +195,14 @@
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.12" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.12" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.5" level="project" />
     <orderEntry type="library" name="Maven: com.baomidou:mybatis-plus-support:2.3" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" level="project" />
     <orderEntry type="library" name="Maven: com.renewable.terminal:message-client:0.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.renewable.terminal:inclination-common:0.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.renewable.terminal:audio-common:0.0.1-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="vibration-common" />
+    <orderEntry type="library" name="Maven: com.matlab.runtime:javabuilder:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: com.matlab.cal:shujujifen:1.0.0" level="project" />
   </component>
 </module>

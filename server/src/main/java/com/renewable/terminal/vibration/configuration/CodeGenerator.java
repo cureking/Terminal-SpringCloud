@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
+import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
@@ -26,6 +27,8 @@ public class CodeGenerator {
 		gc.setOutputDir(projectPath + "/src/main/java");
 		gc.setAuthor("jarry");
 		gc.setOpen(false);
+		// 不再使用默认的Date类型（DateType.TIME_PACK =》 LocalDate，SDK8后新的日期类型，很麻烦)。
+		gc.setDateType(DateType.ONLY_DATE);
 		mpg.setGlobalConfig(gc);
 
 		// 数据源配置
@@ -77,7 +80,7 @@ public class CodeGenerator {
 		strategy.setEntityLombokModel(true);
 		strategy.setRestControllerStyle(true);
 //        strategy.setInclude(new String[]{"course", "score", "student", "user"});
-		strategy.setInclude(new String[]{"vibration_dev_config", "vibration_area", "vibration_peak"});
+		strategy.setInclude(new String[]{"vibration_sensor_config"});
 
 		strategy.setControllerMappingHyphenStyle(true);
 		strategy.setTablePrefix(pc.getModuleName() + "_");

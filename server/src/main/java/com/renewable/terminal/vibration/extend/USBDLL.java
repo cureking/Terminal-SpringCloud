@@ -246,7 +246,7 @@ public class USBDLL {
 		 *
 		 * @param devId               设备ID 32 位有符号整型参数，子设备号，由系统自动分配，第一个插上电脑的采集设备号为0，第二个为1，以此类推。
 		 * @param oversamplingRate    采样频率 32 位有符号整型参数，设定AD 采集的过采样率。
-		 * @param range               量程类型 32 位有符号整型参数，设置对应AD量程。 1表示+-10V，分辨率305uv，0表示+-5V，分辨率152uv
+		 * @param range               量程类型 32 位有符号整型参数，设置对应AD量程。0表示+-5V，分辨率152uv, 1表示+-10V，分辨率305uv
 		 * @param samplingFrequency   32 位有符号整型参数，设置连续采样频率，设置范围100—100000
 		 * @param triggerModel        设置触发模式。=0 设置软件启动一次采样过程.=1：设置外部触发启动一次采样过程。
 		 * @param triggerPolarity     设置触发输入极性。=0 设置外部触发上升边沿有效/=1 设置外部触发下降边沿有效。
@@ -278,14 +278,14 @@ public class USBDLL {
 //		int ad_range = 0;
 
 		int devId = 0;
-		int oversamplingRate = 100;
+		int oversamplingRate = 4;
 		int range = 0;
-		int samplingFrequency = 200;
+		int samplingFrequency = 100;
 		int triggerModel = 0;
 		int triggerPolarity = 0;
 		int clockModel = 0;
 		int extendClockPolarity = 0;
-		int number = 1600;
+		int number = 16000;
 
 
 //		System.out.println(CLibrary.INSTANCE.openUSB());

@@ -13,6 +13,7 @@ public class DLLConstant {
 	public static final String DLL_LINUX_FILE_NAME = "No_related_version_about_linux";
 
 	public static final int DLL_AD_SINGLE_ARRAY_SIZE = 8;
+	public static final int DEVIDE_GROUP_ARRAY_SIZE = 2;
 
 	public enum DllExecuteResultTypeEnum {
 

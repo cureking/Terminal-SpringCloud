@@ -1,7 +1,7 @@
 package com.renewable.terminal.vibration.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.renewable.terminal.vibration.entity.VibrationArea;
+import com.renewable.terminal.vibration.entity.VibrationOrigin;
 
 /**
  * <p>
@@ -11,6 +11,6 @@ import com.renewable.terminal.vibration.entity.VibrationArea;
  * @author jarry
  * @since 2019-08-09
  */
-public interface VibrationAreaMapper extends BaseMapper<VibrationArea> {
+public interface VibrationOriginMapper extends BaseMapper<VibrationOrigin> {
 
 }

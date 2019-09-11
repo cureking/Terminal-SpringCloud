@@ -2,32 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6127612-4fed-499c-9ec3-02d1705acf7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_matlab_cal_shujujifen_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_matlab_runtime_javabuilder_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/renewable/terminal/vibration/entity/VibrationSensorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/controller/VibrationSensorConfigController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/dao/VibrationSensorConfigMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/dto/SensorGroupInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/extend/VibrationMatlabUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/service/IVibrationSensorConfigService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/service/impl/VibrationSensorConfigServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/resources/mapper/VibrationSensorConfigMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/renewable/terminal/vibration/client/VibrationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/renewable/terminal/vibration/client/VibrationClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/vibration-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/client/vibration-client.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/vibration-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/vibration-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/renewable/terminal/vibration/entity/VibrationArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/renewable/terminal/vibration/entity/VibrationOrigin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/renewable/terminal/vibration/entity/VibrationDevConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/renewable/terminal/vibration/entity/VibrationDevConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/renewable/terminal/vibration/entity/VibrationPeak.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/renewable/terminal/vibration/entity/VibrationPeak.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/controller/VibrationAreaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/controller/VibrationAreaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/configuration/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/configuration/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/constant/DLLConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/constant/DLLConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/controller/VibrationAreaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/controller/VibrationOriginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/controller/VibrationDLLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/controller/VibrationDLLController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/controller/VibrationDevConfigController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/controller/VibrationDevConfigController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/controller/VibrationPeakController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/controller/VibrationPeakController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/entity/VibrationArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/renewable/terminal/vibration/entity/VibrationArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/entity/VibrationDevConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/renewable/terminal/vibration/entity/VibrationDevConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/entity/VibrationPeak.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/renewable/terminal/vibration/entity/VibrationPeak.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/dao/VibrationAreaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/dao/VibrationOriginMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/extend/USBDLL.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/extend/USBDLL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/extend/VibrationDataDealPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/extend/VibrationDataDealPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/service/IVibrationAreaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/service/IVibrationOriginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/service/IVibrationDevConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/service/IVibrationDevConfigService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/service/IVibrationPeakService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/service/IVibrationPeakService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/service/impl/VibrationAreaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/service/impl/VibrationOriginServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/service/impl/VibrationDLLServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/service/impl/VibrationDLLServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/service/impl/VibrationDevConfigServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/service/impl/VibrationDevConfigServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/service/impl/VibrationPeakServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration/service/impl/VibrationPeakServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/mapper/VibrationAreaMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/mapper/VibrationOriginMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/mapper/VibrationAreaMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/vibration-server-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/vibration-server-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/vibration-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/server/vibration-server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vibration.iml" beforeDir="false" afterPath="$PROJECT_DIR$/vibration.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +89,9 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectId" id="1PIr7MEWhQkv8SmvGz6aJ1uuZBO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -87,35 +107,35 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565345173723" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/common" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/vibration" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.43570057" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.renewable.terminal.vibration.service.impl" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\vibration\server\src\main\resources\mapper" />
+      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\vibration\server\src\main\java\com\renewable\terminal\vibration\service\impl" />
+      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\vibration\server\src\main\java\com\renewable\terminal\vibration\service" />
+      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\vibration\server\src\main\java\com\renewable\terminal\vibration" />
+      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\vibration\server" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\vibration\server\src\main\java\com\renewable\terminal\vibration" />
       <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\vibration\common" />
       <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\vibration\client" />
       <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\vibration\server\src\main\resources" />
       <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\vibration\server\src\main\java\com\renewable\terminal\vibration\entity" />
-      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\vibration\server\src\main\java\com\renewable\terminal\vibration\extend" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.renewable.terminal.vibration.util" />
       <recent name="com.renewable.terminal.vibration.extend" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\vibration\server\src\main\java\com\renewable\terminal\vibration\service\impl" />
-      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\vibration\server\src\main\java\com\renewable\terminal\vibration\service" />
-      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\vibration\server\src\main\java\com\renewable\terminal\vibration" />
-      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\vibration\server\src\main\resources\mapper" />
-      <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\vibration\server" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.renewable.terminal.vibration.service.impl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -241,7 +261,23 @@
       <workItem from="1565337473890" duration="4446000" />
       <workItem from="1565341939323" duration="1245000" />
       <workItem from="1565572287717" duration="1306000" />
-      <workItem from="1565573677350" duration="14888000" />
+      <workItem from="1565573677350" duration="20179000" />
+      <workItem from="1565760952865" duration="3030000" />
+      <workItem from="1566546889611" duration="990000" />
+      <workItem from="1566782108843" duration="1222000" />
+      <workItem from="1566797898727" duration="1200000" />
+      <workItem from="1566872407891" duration="2774000" />
+      <workItem from="1567044542673" duration="598000" />
+      <workItem from="1567395662832" duration="1520000" />
+      <workItem from="1567473252345" duration="599000" />
+      <workItem from="1567559565971" duration="3769000" />
+      <workItem from="1567575280647" duration="1197000" />
+      <workItem from="1567760055802" duration="599000" />
+      <workItem from="1567906997687" duration="6204000" />
+      <workItem from="1568084044742" duration="17959000" />
+      <workItem from="1568120504842" duration="5000" />
+      <workItem from="1568168475285" duration="924000" />
+      <workItem from="1568169427512" duration="1615000" />
     </task>
     <servers />
   </component>
@@ -253,7 +289,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -263,51 +301,33 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar!/org/apache/commons/lang/ArrayUtils.java</url>
+          <line>3695</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar!/org/apache/commons/lang/ArrayUtils.java</url>
+          <line>3696</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar!/org/apache/commons/lang/ArrayUtils.java</url>
+          <line>3697</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="USBDLL.USBDLLUtil.openUSB()" />
+        <watch expression="vibrationSensorConfig.getGroupId()" />
       </configuration>
       <configuration name="Application">
         <watch expression="USBDLLUtil.getDeviceNumber()" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

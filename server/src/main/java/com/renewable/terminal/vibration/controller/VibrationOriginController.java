@@ -2,7 +2,7 @@ package com.renewable.terminal.vibration.controller;
 
 
 import com.renewable.terminal.terminal.common.ServerResponse;
-import com.renewable.terminal.vibration.service.IVibrationAreaService;
+import com.renewable.terminal.vibration.service.IVibrationOriginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,13 +16,14 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/vibration_area/")
-public class VibrationAreaController {
+public class VibrationOriginController {
 
 	@Autowired
-	private IVibrationAreaService iVibrationAreaService;
+	private IVibrationOriginService iVibrationOriginService;
 
 	/**
 	 * 在指定时间区域内，请求指定数量的数据（自动计算步长）
+	 *
 	 * @param devId
 	 * @param passagewayCode
 	 * @param count
@@ -37,7 +38,7 @@ public class VibrationAreaController {
 											  @RequestParam(value = "count", defaultValue = "1024") Integer count,
 											  @RequestParam(value = "startTime", defaultValue = "1970-1-1 0:0:0") String startTime,
 											  @RequestParam(value = "endTime", defaultValue = "2100-03-14 11:33:54") String endTime) {
-		return iVibrationAreaService.listByTimeWithCount(devId, passagewayCode, count, startTime, endTime);
+		return iVibrationOriginService.listByTimeWithCount(devId, passagewayCode, count, startTime, endTime);
 	}
 
 }

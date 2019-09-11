@@ -1,5 +1,7 @@
 package com.renewable.terminal.vibration.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -94,11 +96,13 @@ public class VibrationDevConfig implements Serializable {
 	 */
 	private String mark;
 
+	@TableField(value = "create_time", fill = FieldFill.INSERT)
 	private Date createTime;
 
 	/**
 	 * 更新时间
 	 */
+	@TableField(value = "update_time", fill = FieldFill.INSERT_UPDATE)
 	private Date updateTime;
 
 

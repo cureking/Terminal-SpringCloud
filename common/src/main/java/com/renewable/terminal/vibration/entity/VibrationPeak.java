@@ -1,6 +1,8 @@
 package com.renewable.terminal.vibration.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -30,6 +32,13 @@ public class VibrationPeak implements Serializable {
 	@TableId(value = "id", type = IdType.AUTO)
 	private Long id;
 
+
+	/**
+	 * 分组id
+	 */
+	private Integer groupId;
+
+
 	private String devConfigId;
 
 	/**
@@ -38,19 +47,34 @@ public class VibrationPeak implements Serializable {
 	private String terminalId;
 
 	/**
-	 * 设备的id号，系统分配。从0递增
+	 * 振动位移
 	 */
-	private Integer devId;
+	private Double displacement;
 
 	/**
-	 * 通道，表示这是第几个通道的数据（八个通道选一个）
+	 * 振动位移的方向
 	 */
-	private Integer passagewayCode;
+	private Double displacementDirect;
 
 	/**
-	 * 振动的测量值
+	 * 振动速度
 	 */
-	private Float vibratingValue;
+	private Double speed;
+
+	/**
+	 * 振动速度的方向
+	 */
+	private Double speedDirect;
+
+	/**
+	 * 振动加速度
+	 */
+	private Double accelerate;
+
+	/**
+	 * 振动加速度的方向
+	 */
+	private Double accelerateDirect;
 
 	/**
 	 * 备注
@@ -65,6 +89,7 @@ public class VibrationPeak implements Serializable {
 	/**
 	 * 创建时间
 	 */
+	@TableField(value = "create_time", fill = FieldFill.INSERT)
 	private Date createTime;
 
 

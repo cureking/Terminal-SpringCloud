@@ -1,14 +1,18 @@
 package com.renewable.terminal.vibration.service.impl;
 
+//import com.renewable.terminal.message.client.VibrationMessageClient;
+
 import com.renewable.terminal.terminal.common.ServerResponse;
-import com.renewable.terminal.vibration.entity.VibrationArea;
 import com.renewable.terminal.vibration.entity.VibrationDevConfig;
+import com.renewable.terminal.vibration.entity.VibrationOrigin;
 import com.renewable.terminal.vibration.extend.USBDLL;
-import com.renewable.terminal.vibration.service.IVibrationAreaService;
 import com.renewable.terminal.vibration.service.IVibrationDLLService;
 import com.renewable.terminal.vibration.service.IVibrationDevConfigService;
+import com.renewable.terminal.vibration.service.IVibrationOriginService;
+import com.renewable.terminal.vibration.service.IVibrationPeakService;
 import com.renewable.terminal.vibration.util.CheckDataUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.catalina.Server;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,7 +33,13 @@ public class VibrationDLLServiceImpl implements IVibrationDLLService {
 	private IVibrationDevConfigService iVibrationDevConfigService;
 
 	@Autowired
-	private IVibrationAreaService iVibrationAreaService;
+	private IVibrationOriginService iVibrationOriginService;
+
+	@Autowired
+	private IVibrationPeakService iVibrationPeakService;
+
+//	@Autowired
+//	private VibrationMessageClient vibrationMessageClient;
 
 	@Override
 	public ServerResponse readAdContinueData() {
@@ -45,7 +55,7 @@ public class VibrationDLLServiceImpl implements IVibrationDLLService {
 		// 2.针对每个配置去读取读取数据
 		for (VibrationDevConfig vibrationDevConfig : vibrationDevConfigList) {
 			// 数据校验
-			ServerResponse response = CheckDataUtil.checkData(vibrationDevConfig,"terminalId", "devId");
+			ServerResponse response = CheckDataUtil.checkData(vibrationDevConfig, "terminalId", "devId");
 
 			// 2.1 获取数据
 			ServerResponse<float[]> adContinueResponse = this.readAdContinueDataSingle(vibrationDevConfig);
@@ -58,17 +68,28 @@ public class VibrationDLLServiceImpl implements IVibrationDLLService {
 			String terminalId = vibrationDevConfig.getTerminalId();
 			int devId = vibrationDevConfig.getDevId();
 			String devConfigId = vibrationDevConfig.getId();
-			ServerResponse<List<VibrationArea>> vibrationArrayDealResponse = this.adArrayDeal(terminalId, devId, devConfigId, resultArray);
+			ServerResponse<List<VibrationOrigin>> vibrationArrayDealResponse = this.adArrayDeal(terminalId, devId, devConfigId, resultArray);
 			if (vibrationArrayDealResponse.isFail()) {
 				return vibrationArrayDealResponse;
 			}
 
 			// 2.3 数据保存
-			List<VibrationArea> vibrationAreaList = vibrationArrayDealResponse.getData();
-			boolean result = iVibrationAreaService.saveBatch(vibrationAreaList);
+			List<VibrationOrigin> vibrationOriginList = vibrationArrayDealResponse.getData();
+			boolean result = iVibrationOriginService.saveBatch(vibrationOriginList);
 			if (!result) {
 				continue;
 			}
+
+
+			// 2.4 数据进行peak算法处理
+			ServerResponse peakResponse = iVibrationPeakService.data2PeakCalAndSave(vibrationOriginList);
+			if (peakResponse.isFail()){
+				log.warn(peakResponse.getMsg());
+				return peakResponse;
+			}
+
+			//2.4 数据发往中控室
+//			vibrationMessageClient.uploadAreaList(vibrationAreaList);
 		}
 
 		// 3.返回成功返回
@@ -93,28 +114,28 @@ public class VibrationDLLServiceImpl implements IVibrationDLLService {
 		return adContinueResponse;
 	}
 
-	private ServerResponse<List<VibrationArea>> adArrayDeal(String terminalId, int devId, String devConfigId, float[] originArray) {
+	private ServerResponse<List<VibrationOrigin>> adArrayDeal(String terminalId, int devId, String devConfigId, float[] originArray) {
 
 		// 1.数据校验
 
 
 		// 2.新建List
-		List<VibrationArea> vibrationAreaList = new ArrayList<>();
+		List<VibrationOrigin> vibrationOriginList = new ArrayList<>();
 
 		for (int i = 0; i < originArray.length; i++) {
 			int passageWayCode = i % DLL_AD_SINGLE_ARRAY_SIZE;
 
-			VibrationArea vibrationArea = new VibrationArea();
+			VibrationOrigin vibrationOrigin = new VibrationOrigin();
 
-			vibrationArea.setDevConfigId(devConfigId);
-			vibrationArea.setTerminalId(terminalId);
-			vibrationArea.setDevId(devId);
-			vibrationArea.setPassagewayCode(passageWayCode);
-			vibrationArea.setVibratingValue(originArray[i]);
+			vibrationOrigin.setDevConfigId(devConfigId);
+			vibrationOrigin.setTerminalId(terminalId);
+			vibrationOrigin.setDevId(devId);
+			vibrationOrigin.setPassagewayCode(passageWayCode);
+			vibrationOrigin.setVibratingValue(originArray[i]);
 
-			vibrationAreaList.add(vibrationArea);
+			vibrationOriginList.add(vibrationOrigin);
 		}
 
-		return ServerResponse.createBySuccess(vibrationAreaList);
+		return ServerResponse.createBySuccess(vibrationOriginList);
 	}
 }

@@ -13,4 +13,7 @@ import com.renewable.terminal.vibration.entity.VibrationDevConfig;
  */
 public interface IVibrationDevConfigService extends IService<VibrationDevConfig> {
 
+	double getSamplingFromDevConfig(String devId);
+
+	String getDevConfigIdFromDevConfig();
 }

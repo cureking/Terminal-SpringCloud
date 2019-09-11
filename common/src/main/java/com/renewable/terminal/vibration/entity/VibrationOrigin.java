@@ -1,6 +1,8 @@
 package com.renewable.terminal.vibration.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -20,7 +22,7 @@ import java.util.Date;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-public class VibrationArea implements Serializable {
+public class VibrationOrigin implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -66,6 +68,7 @@ public class VibrationArea implements Serializable {
 	/**
 	 * 创建时间
 	 */
+	@TableField(value = "create_time", fill = FieldFill.INSERT)
 	private Date createTime;
 
 

@@ -1,7 +1,11 @@
 package com.renewable.terminal.vibration.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.renewable.terminal.terminal.common.ServerResponse;
+import com.renewable.terminal.vibration.entity.VibrationOrigin;
 import com.renewable.terminal.vibration.entity.VibrationPeak;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +17,5 @@ import com.renewable.terminal.vibration.entity.VibrationPeak;
  */
 public interface IVibrationPeakService extends IService<VibrationPeak> {
 
+	ServerResponse data2PeakCalAndSave(List<VibrationOrigin> vibrationOriginList);
 }
