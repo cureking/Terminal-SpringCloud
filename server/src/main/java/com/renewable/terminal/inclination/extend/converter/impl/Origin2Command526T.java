@@ -32,9 +32,8 @@ public class Origin2Command526T implements Origin2Command {
 //		int dataAreaSingleDataCount = 3;
 
 		int dataAreaStart = 4;
-		int[][] dataFormateArray = {{2,3},{2,3},{2,3}};
+		int[][] dataFormateArray = {{2, 3}, {2, 3}, {2, 3}};
 	}
-
 
 
 	@Override

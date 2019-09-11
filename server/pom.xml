@@ -73,9 +73,9 @@
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>org.springframework.data</groupId>-->
-            <!--<artifactId>spring-data-redis</artifactId>-->
-            <!--&lt;!&ndash;<version>2.1.6.RELEASE</version>&ndash;&gt;-->
+        <!--<groupId>org.springframework.data</groupId>-->
+        <!--<artifactId>spring-data-redis</artifactId>-->
+        <!--&lt;!&ndash;<version>2.1.6.RELEASE</version>&ndash;&gt;-->
         <!--</dependency>-->
 
         <!-- 本地jar包 -->
@@ -89,11 +89,11 @@
             <artifactId>javabuilder</artifactId>
             <version>1.0.0</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.matlab.cal</groupId>-->
-<!--            <artifactId>sinfit</artifactId>-->
-<!--            <version>1.0.0</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.matlab.cal</groupId>-->
+        <!--            <artifactId>sinfit</artifactId>-->
+        <!--            <version>1.0.0</version>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>com.matlab.cal</groupId>

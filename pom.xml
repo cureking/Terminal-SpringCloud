@@ -28,7 +28,6 @@
     </properties>
 
 
-
     <dependencyManagement>
         <dependencies>
             <dependency>

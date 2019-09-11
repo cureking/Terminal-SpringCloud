@@ -36,17 +36,18 @@ public class SerialSender {
 
 	private static ArrayList<String> portList = SerialPortUtil.findPort();
 
-	// 建立线程池	// TODO 不知道这里直接new，可不可以注入（感觉有点模糊了）
+	// 建立线程池
 	private static SerialPool serialPool = new SerialPool(10, 100);
 
-	public ServerResponse sendData(String portName, int baudrate, byte[] originData) {
+	public ServerResponse sendData(String portName, int baudrate, int parity, byte[] originData) {
 		// 1.判断对应的SerialPort对象，在serialPortConcurrentHashMap中是否存在
 		String serialPortName = portName + "_" + baudrate;
 
 		// 2.如果不存在，直接创建对应SerialPort对象（单独建立方法，并且需要添加SerialListener），并置入serialPortConcurrentHashMap中
 		if (!serialPortConcurrentHashMap.containsKey(serialPortName)) {
-			ServerResponse serialPortGeneratorResponse = this.serialPortGenerator(portName, baudrate);
+			ServerResponse serialPortGeneratorResponse = this.serialPortGenerator(portName, baudrate, parity);
 			if (serialPortGeneratorResponse.isFail()) {
+				log.warn("serialPortGeneratorResponse:{} !", serialPortGeneratorResponse.getMsg());
 				return serialPortGeneratorResponse;
 			}
 			SerialPort serialPort = (SerialPort) serialPortGeneratorResponse.getData();
@@ -54,6 +55,7 @@ public class SerialSender {
 			// 增加监听
 			ServerResponse addListenerResponse = this.addSerialListener(serialPort);
 			if (addListenerResponse.isFail()) {
+				log.warn("addListenerResponse:{} !", addListenerResponse.getMsg());
 				return addListenerResponse;
 			}
 		}
@@ -67,19 +69,60 @@ public class SerialSender {
 		return ServerResponse.createBySuccess();
 	}
 
-	private ServerResponse<SerialPort> serialPortGenerator(String portName, int baudrate) {
+
+
+	/**
+	 * 为了尝试解决 由于频繁访问对应串口，而导致的硬件“拒绝访问”的问题，而提出重新初始化硬件的串口列表，serialPort
+	 * 重新刷新serialPortMap
+	 * @return
+	 */
+	public ServerResponse clearSerialPortMap(){
+		log.warn("start refresh serialPortMap");
+		for (Map.Entry<String, SerialPort> entry : serialPortConcurrentHashMap.entrySet()) {
+			log.warn("start refresh serialPort with portName:{}",entry.getKey());
+			SerialPort serialPort = entry.getValue();
+			try{
+				serialPort.removeEventListener();
+			}catch (Exception e){
+				log.warn("serialPort removeEventListener fail ! Exception:{} .", e.toString());
+			}
+
+			try{
+				SerialPortUtil.closePort(serialPort);
+			}catch (Exception e){
+				log.warn("serialPort closePort fail ! Exception:{} .", e.toString());
+			}
+
+			// 我无法确定这个方式是否绝对有效，而尝试这个异常又太耗时，这里添加一个赋值null操作，争取还可以通过GC，销毁对应对象
+			serialPort = null;
+			log.warn("end refresh serialPort with portName:{}",entry.getKey());
+		}
+
+		serialPortConcurrentHashMap.clear();
+
+		log.warn("end refresh serialPortMap");
+		return ServerResponse.createBySuccessMessage("clearSerialPortMap");
+	}
+
+	private ServerResponse<SerialPort> serialPortGenerator(String portName, int baudrate, int parity) {
 
 		SerialPort serialPort = null;
 
 		try {
 			serialPort = SerialPortUtil.openPort(portName, baudrate);
+			// 设置相关参数（目前是为了设置parity，后续也许就要设置dataBits什么的了）
+			SerialPortUtil.setSerialPortParams(serialPort,baudrate,null,null,parity);
 		} catch (SerialPortParameterFailure serialPortParameterFailure) {
+			log.warn("SerialPortParameterFailure:{} !", serialPortParameterFailure.toString());
 			return ServerResponse.createByErrorMessage(serialPortParameterFailure.toString());
 		} catch (NotASerialPort notASerialPort) {
+			log.warn("NotASerialPort:{} !", notASerialPort.toString());
 			return ServerResponse.createByErrorMessage(notASerialPort.toString());
 		} catch (NoSuchPort noSuchPort) {
+			log.warn("NoSuchPort:{} !", noSuchPort.toString());
 			return ServerResponse.createByErrorMessage(noSuchPort.toString());
 		} catch (PortInUse portInUse) {
+			log.warn("PortInUse:{} !", portInUse.toString());
 			return ServerResponse.createByErrorMessage(portInUse.toString());
 		}
 
@@ -108,13 +151,13 @@ public class SerialSender {
 		@Override
 		public void run() {
 			try {
-				log.info("start sending data:{}.", Arrays.toString(originData));
+				log.info("start sending {} with data:{}.", serialPort.getName()+"_"+serialPort.getBaudRate(),Arrays.toString(originData));
 				SerialPortUtil.sendToPort(serialPort, originData);
-				log.info("start sended data:{}.", Arrays.toString(originData));
+				log.info("start sended {} with data:{}.", serialPort.getName()+"_"+serialPort.getBaudRate(),Arrays.toString(originData));
 			} catch (SendDataToSerialPortFailure sendDataToSerialPortFailure) {
-				sendDataToSerialPortFailure.printStackTrace();
+				log.error("SerialSender/runnableTaskGenerator/run: catch SendDataToSerialPortFailure:{}", sendDataToSerialPortFailure.toString());
 			} catch (SerialPortOutputStreamCloseFailure serialPortOutputStreamCloseFailure) {
-				serialPortOutputStreamCloseFailure.printStackTrace();
+				log.error("SerialSender/runnableTaskGenerator/run: catch SerialPortOutputStreamCloseFailure:{}", serialPortOutputStreamCloseFailure.toString());
 			}
 		}
 	}

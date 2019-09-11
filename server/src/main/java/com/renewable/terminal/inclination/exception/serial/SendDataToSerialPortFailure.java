@@ -6,12 +6,17 @@ public class SendDataToSerialPortFailure extends Exception {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public SendDataToSerialPortFailure() {
+	private Exception exception;
+
+	//	public SendDataToSerialPortFailure() {
+//	}
+	public SendDataToSerialPortFailure(Exception exception) {
+		this.exception = exception;
 	}
 
 	@Override
 	public String toString() {
-		return "数据发送端口失败";
+		return "数据发送端口失败. Exception:" + exception.toString();
 	}
 
 }

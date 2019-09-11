@@ -195,7 +195,7 @@ public class InclinationOriginServiceImpl extends ServiceImpl<InclinationOriginM
 			ServerResponse terminalResponse = terminalClient.refreshTerminal();
 			if (terminalResponse.isFail()) {
 				log.error("ISerialCommandRecieveServcieImpl/getTerminalId:get remote terminal service fail !");
-				throw new RemoteServiceException(REMOTE_ERROR.getCode(),REMOTE_ERROR.getDesc());
+				throw new RemoteServiceException(REMOTE_ERROR.getCode(), REMOTE_ERROR.getDesc());
 			}
 			terminal = (Terminal) terminalResponse.getData();
 			terminalId = terminal.getId();

@@ -29,7 +29,7 @@ public class InclinationWarningController {
 	@ResponseBody
 	public ServerResponse listByTimeWithCount() {
 		List<InclinationWarning> inclinationWarningList = iInclinationWarningService.list();
-		if (CollectionUtils.isEmpty(inclinationWarningList)){
+		if (CollectionUtils.isEmpty(inclinationWarningList)) {
 			return ServerResponse.createBySuccessMessage("the inclinationWarningList is null !");
 		}
 		return ServerResponse.createBySuccess(inclinationWarningList);

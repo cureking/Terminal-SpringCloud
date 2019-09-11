@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableEurekaClient
 //@EnableFeignClients(basePackages = "com.renewable.terminal.terminal.client")
-@EnableFeignClients(basePackages = {"com.renewable.terminal.terminal.client","com.renewable.terminal.message.client"})
+@EnableFeignClients(basePackages = {"com.renewable.terminal.terminal.client", "com.renewable.terminal.message.client"})
 @ComponentScan(basePackages = "com.renewable.terminal")
 @MapperScan(basePackages = "com.renewable.terminal.inclination.dao")
 public class InclinationApplication {

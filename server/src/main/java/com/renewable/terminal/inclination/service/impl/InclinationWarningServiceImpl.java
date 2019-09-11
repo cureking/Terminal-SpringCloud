@@ -32,12 +32,12 @@ public class InclinationWarningServiceImpl extends ServiceImpl<InclinationWarnin
 
 	@Override
 	public ServerResponse saveAndUpload(InclinationWarning inclinationWarning) {
-		if (inclinationWarning == null){
+		if (inclinationWarning == null) {
 			return ServerResponse.createByErrorMessage("inclinationWarning is null !");
 		}
 
 		boolean result = this.save(inclinationWarning);
-		if (!result){
+		if (!result) {
 			return ServerResponse.createByErrorMessage("inclinationWarning save fail !");
 		}
 

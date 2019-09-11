@@ -2,31 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76d38206-6624-4af2-bff7-f18687132928" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_matlab_runtime_javabuilder_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_renewable_terminal_vibration_common_0_0_1_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/entity/InclinationInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/entity/InclinationTotal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/entity/InclinationWarning.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/util/CommandReceiveConvertUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/util/CommandSendConvertUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/util/MatlabUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/converter/impl/Command2Origin116T.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/converter/impl/Origin2Command116T.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/util/CRC16Util.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/inclination-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/server/inclination-server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/com/renewable/terminal/inclination/client/InclinationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/com/renewable/terminal/inclination/client/InclinationClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/InclinationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/InclinationApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/aspect/InclinationInitWarningCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/aspect/InclinationInitWarningCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/aspect/InclinationTotalWarningCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/aspect/InclinationTotalWarningCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/constant/InclinationConfigConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/constant/InclinationConfigConstant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/controller/InclinationConfigController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/controller/InclinationConfigController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/controller/SerialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/controller/SerialController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/controller/InclinationWarningController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/controller/InclinationWarningController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/controller/TestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/entity/InclinationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/entity/InclinationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/exception/serial/SendDataToSerialPortFailure.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/exception/serial/SendDataToSerialPortFailure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/SerialListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/SerialListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/SerialSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/SerialSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/converter/Origin2CommandStrategyContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/converter/Origin2CommandStrategyContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/converter/impl/Origin2Command526T.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/converter/impl/Origin2Command526T.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/converter/impl/Origin2Command726T.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/converter/impl/Origin2Command726T.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/converter/impl/Origin2Command826T.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/converter/impl/Origin2Command826T.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/util/CommandReceiveConvertUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/util/CommandReceiveConvertUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/IInclinationConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/IInclinationConfigService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/impl/ISerialCommandSendServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/impl/ISerialCommandSendServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/impl/InclinationConfigServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/impl/InclinationConfigServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/impl/InclinationInitServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/impl/InclinationInitServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/impl/InclinationOriginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/impl/InclinationOriginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/util/OtherUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/util/OtherUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/impl/InclinationTotalServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/impl/InclinationTotalServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/impl/InclinationWarningServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/service/impl/InclinationWarningServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/util/SerialPortUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/util/SerialPortUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/inclination-server-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/inclination-server-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,9 +132,9 @@
     <property name="last_opened_file_path" value="C:/sinfit.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.41362762" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -141,11 +153,11 @@
       <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\inclination\server\src\main\java\com\renewable\terminal\inclination" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.renewable.terminal.inclination.extend.util" />
       <recent name="com.renewable.terminal.inclination.util" />
       <recent name="com.renewable.terminal.inclination.extend.converter.impl" />
       <recent name="com.renewable.terminal.inclination.entity" />
       <recent name="com.renewable.terminal.inclination.aspect" />
-      <recent name="com.renewable.terminal.inclination.annotation" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\curek\IdeaProjects\Renewable_Power\SpringCloud\terminal\inclination\server\src\main\resources\mapper" />
@@ -311,7 +323,20 @@
       <workItem from="1566444430844" duration="3582000" />
       <workItem from="1566450410042" duration="5570000" />
       <workItem from="1566456977932" duration="9156000" />
-      <workItem from="1566782103818" duration="1227000" />
+      <workItem from="1566782103818" duration="5107000" />
+      <workItem from="1566797888215" duration="2397000" />
+      <workItem from="1566808369985" duration="6671000" />
+      <workItem from="1567044527603" duration="4748000" />
+      <workItem from="1567128438008" duration="599000" />
+      <workItem from="1567144563568" duration="4406000" />
+      <workItem from="1567311464452" duration="595000" />
+      <workItem from="1567396581091" duration="613000" />
+      <workItem from="1567477382994" duration="2038000" />
+      <workItem from="1567559580261" duration="1195000" />
+      <workItem from="1567575293693" duration="598000" />
+      <workItem from="1567760061191" duration="1796000" />
+      <workItem from="1568000236601" duration="19427000" />
+      <workItem from="1568120485487" duration="31000" />
     </task>
     <servers />
   </component>
@@ -380,7 +405,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/com/renewable/terminal/inclination/extend/converter/impl/Origin2Command526T.java</url>
-          <line>96</line>
+          <line>95</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>

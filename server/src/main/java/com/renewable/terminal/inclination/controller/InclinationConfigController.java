@@ -36,17 +36,17 @@ public class InclinationConfigController {
 	@ResponseBody
 	public ServerResponse saveConfig(@RequestBody InclinationConfig inclinationConfig) {
 		// 数据校验
-		if (inclinationConfig == null || inclinationConfig.getAddress() == null){
+		if (inclinationConfig == null || inclinationConfig.getAddress() == null) {
 			return ServerResponse.createByErrorMessage("inclinationConfig is null or its address is null !");
 		}
 		// 计算inclinationConfig的X和Y
 //		ServerResponse<InclinationConfig> response = iInclinationConfigService.calXAndY(inclinationConfig);
 		ServerResponse<InclinationConfig> response = iInclinationConfigService.calInitWithMatlab(inclinationConfig);
-		if (response.isFail()){
+		if (response.isFail()) {
 			return response;
 		}
 		InclinationConfig inclinationConfigCalXAndY = response.getData();
-		if (iInclinationConfigService.getById(inclinationConfigCalXAndY.getAddress()) != null){
+		if (iInclinationConfigService.getById(inclinationConfigCalXAndY.getAddress()) != null) {
 			return ServerResponse.createByErrorMessage("duplicate the primary key:inclinationConfig.address !");
 		}
 
@@ -86,7 +86,7 @@ public class InclinationConfigController {
 		// 计算inclinationConfig的X和Y
 //		ServerResponse<InclinationConfig> response = iInclinationConfigService.calXAndY(inclinationConfig);
 		ServerResponse<InclinationConfig> response = iInclinationConfigService.calInitWithMatlab(inclinationConfig);
-		if (response.isFail()){
+		if (response.isFail()) {
 			return response;
 		}
 		InclinationConfig inclinationConfigCalXAndY = response.getData();
@@ -107,7 +107,7 @@ public class InclinationConfigController {
 		// 计算inclinationConfig的X和Y
 //		ServerResponse<InclinationConfig> response = iInclinationConfigService.calXAndY(inclinationConfig);
 		ServerResponse<InclinationConfig> response = iInclinationConfigService.calInitWithMatlab(inclinationConfig);
-		if (response.isFail()){
+		if (response.isFail()) {
 			return response;
 		}
 		InclinationConfig inclinationConfigCalXAndY = response.getData();

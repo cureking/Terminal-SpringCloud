@@ -36,48 +36,47 @@ public class InclinationTotalWarningCheck {
 	private IInclinationWarningService iInclinationWarningService;
 
 
-
 	@Around("@annotation(com.renewable.terminal.inclination.annotation.InclinationTotalWarning)")
 	// 说实话，这个切面写得挺糟糕的，没有用反射，还引入了一堆服务。不过这只是一个demo，后面可以改进
 	public ServerResponse<InclinationTotal> doInclinationTotalWarningcheck(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
 
 		// doBefore
 		// do
-		ServerResponse<InclinationTotal> result = (ServerResponse<InclinationTotal>)proceedingJoinPoint.proceed();
-		if (result.isFail()){
+		ServerResponse<InclinationTotal> result = (ServerResponse<InclinationTotal>) proceedingJoinPoint.proceed();
+		if (result.isFail()) {
 			return result;
 		}
 
 		InclinationTotal inclinationTotal = result.getData();
 		ServerResponse checkResponse = CheckDataUtil.checkData(inclinationTotal, "inclinationId", "terminalId");
-		if (checkResponse.isFail()){
+		if (checkResponse.isFail()) {
 			return result;
 		}
 		Integer address = inclinationTotal.getInclinationId();
 
 		// doAfter 插入数据后，获取最后两条数据
 		ServerResponse<List<InclinationTotal>> inclinationTotalListResponse = inclinationTotalService.getLastByCount(address, 2);
-		if (inclinationTotalListResponse.isFail()){
+		if (inclinationTotalListResponse.isFail()) {
 			return result;
 		}
-		List<InclinationTotal> inclinationTotalList = (List<InclinationTotal>)inclinationTotalListResponse.getData();
+		List<InclinationTotal> inclinationTotalList = (List<InclinationTotal>) inclinationTotalListResponse.getData();
 		ServerResponse checkListResponse = CheckDataUtil.checkData(inclinationTotalList, "angleTotal");
-		if (checkListResponse.isFail()){
+		if (checkListResponse.isFail()) {
 			return result;
 		}
 
 		// 计算，获取warning逻辑
 		InclinationConfig inclinationConfig = iInclinationConfigService.getById(address);
 		ServerResponse checkConfigResponse = CheckDataUtil.checkData(inclinationConfig, "totalAngleLimit");
-		if (checkConfigResponse.isFail()){
+		if (checkConfigResponse.isFail()) {
 			return result;
 		}
 
-		if (inclinationTotalList.size() < 2){
+		if (inclinationTotalList.size() < 2) {
 			return result;
 		}
 
-		if (inclinationTotalList.get(0).getAngleTotal() > inclinationConfig.getTotalAngleLimit() && inclinationTotalList.get(1).getAngleTotal() > inclinationConfig.getTotalAngleLimit()){
+		if (inclinationTotalList.get(0).getAngleTotal() > inclinationConfig.getTotalAngleLimit() && inclinationTotalList.get(1).getAngleTotal() > inclinationConfig.getTotalAngleLimit()) {
 			// TODO 新建warning，并持久化
 			InclinationWarning inclinationWarning = new InclinationWarning();
 			inclinationWarning.setInclinationId(address);
@@ -85,7 +84,7 @@ public class InclinationTotalWarningCheck {
 			inclinationWarning.setOriginId(inclinationTotal.getOriginId());
 			inclinationWarning.setMark("InclinationTotal");
 
-			log.warn("warning about inclinationTotal with inclinationTotalId:{}!",inclinationTotal.getId());
+			log.warn("warning about inclinationTotal with inclinationTotalId:{}!", inclinationTotal.getId());
 			iInclinationWarningService.saveAndUpload(inclinationWarning);
 		}
 

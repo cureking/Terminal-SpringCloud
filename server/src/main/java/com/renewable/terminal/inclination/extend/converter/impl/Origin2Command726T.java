@@ -28,14 +28,14 @@ public class Origin2Command726T implements Origin2Command {
 
 		int dataAreaStart = 4;
 
-		int[][] dataFormateArray = {{3,4},{3,4},{3,2}};
+		int[][] dataFormateArray = {{3, 4}, {3, 4}, {3, 2}};
 	}
 
 
 	@Override
 	public ServerResponse origin2Object(SerialPort serialPort, byte[] originBuffer) {
 
-		log.info("System has choose the sensor about Inclination826T,data:{}", Arrays.toString(originBuffer));
+		log.info("System has choose the sensor about Inclination726T,data:{}", Arrays.toString(originBuffer));
 
 		int command = originBuffer[3] & 0xFF;
 		if (command == InclinationSensorCommandEnum.READALLR.getCode()) {

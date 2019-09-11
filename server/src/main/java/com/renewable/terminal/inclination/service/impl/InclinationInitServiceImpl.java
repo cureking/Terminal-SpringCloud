@@ -52,7 +52,8 @@ public class InclinationInitServiceImpl extends ServiceImpl<InclinationInitMappe
 		}
 
 		// 2.获得总数，并计算ID步长
-		Integer countTotal = this.count();
+		Wrapper<InclinationInit> inclinationInitDurationWrapper = new QueryWrapper<InclinationInit>().between("create_time", startTime, endTime);
+		Integer countTotal = this.count(inclinationInitDurationWrapper);
 		if (countTotal == null) {
 			return ServerResponse.createByErrorMessage("countTotal is null !");
 		}
@@ -155,10 +156,10 @@ public class InclinationInitServiceImpl extends ServiceImpl<InclinationInitMappe
 	}
 
 	@Override
-	public ServerResponse<List<InclinationInit>> getLastByCount(Integer address, Integer count){
-		Wrapper<InclinationInit> inclinationInitWrapper = new QueryWrapper<InclinationInit>().eq("inclination_id", address).orderByDesc("id").last("limit "+count.toString());
+	public ServerResponse<List<InclinationInit>> getLastByCount(Integer address, Integer count) {
+		Wrapper<InclinationInit> inclinationInitWrapper = new QueryWrapper<InclinationInit>().eq("inclination_id", address).orderByDesc("id").last("limit " + count.toString());
 		List<InclinationInit> inclinationInitList = this.list(inclinationInitWrapper);
-		if (CollectionUtils.isEmpty(inclinationInitList)){
+		if (CollectionUtils.isEmpty(inclinationInitList)) {
 			return ServerResponse.createByError();
 		}
 		return ServerResponse.createBySuccess(inclinationInitList);

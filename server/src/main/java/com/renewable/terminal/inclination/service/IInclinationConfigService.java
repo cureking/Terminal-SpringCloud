@@ -16,6 +16,7 @@ public interface IInclinationConfigService extends IService<InclinationConfig> {
 
 	/**
 	 * 计算incliation的X与Y
+	 *
 	 * @param inclinationConfig
 	 * @return
 	 */
@@ -23,6 +24,7 @@ public interface IInclinationConfigService extends IService<InclinationConfig> {
 
 	/**
 	 * 通过matlab，计算incliation的X与Y
+	 *
 	 * @param inclinationConfig
 	 * @return
 	 */

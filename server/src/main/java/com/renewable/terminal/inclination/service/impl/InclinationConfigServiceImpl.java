@@ -30,12 +30,11 @@ import java.util.Map;
 public class InclinationConfigServiceImpl extends ServiceImpl<InclinationConfigMapper, InclinationConfig> implements IInclinationConfigService {
 
 
-
 	// 计算中间变量X与Y
 	@Override
 	public ServerResponse<InclinationConfig> calXAndY(InclinationConfig inclinationConfig) {
 		// 数据校验以及数据组装
-		CheckDataUtil.checkData(inclinationConfig,"radius","initH1","initAngle1","initH2","initAngle2","initH3","initAngle3","initH4","initAngle4");
+		CheckDataUtil.checkData(inclinationConfig, "radius", "initH1", "initAngle1", "initH2", "initAngle2", "initH3", "initAngle3", "initH4", "initAngle4");
 		double[][] singlePlaneArray = new double[4][2];
 		double radius;
 //		if (inclinationConfig.getInitH1() == null) {
@@ -110,32 +109,32 @@ public class InclinationConfigServiceImpl extends ServiceImpl<InclinationConfigM
 		// 为防止出现F与radius出现0的情况，这里作简单校验
 		double X;
 		double Y;
-		if (radius == 0){
+		if (radius == 0) {
 			return ServerResponse.createByErrorMessage("Error: input correct config,please! the radius is zero !");
 		}
-		if (F == 0){
-			if (Fx == 0){
+		if (F == 0) {
+			if (Fx == 0) {
 				X = 1;
-			}else{
+			} else {
 				return ServerResponse.createByErrorMessage("Error: input correct config,please !");
 			}
-			if (Fy == 0){
+			if (Fy == 0) {
 				Y = 1;
-			}else{
+			} else {
 				return ServerResponse.createByErrorMessage("Error: input correct config,please !");
 			}
-		}else{
+		} else {
 			X = Fx / (F * radius);
 			Y = Fy / (F * radius);
 		}
 
 
 		// 根据传感器类型，对X与Y进行数据转换
-		if (inclinationConfig.getInclinationType() == InclinationConfigConstant.InclinationSerialTypeEnum.T826.getValue()){
+		if (inclinationConfig.getInclinationType() == InclinationConfigConstant.InclinationSerialTypeEnum.T826.getValue()) {
 			X = X;
 			Y = Y;
 		}
-		if (inclinationConfig.getInclinationType() == InclinationConfigConstant.InclinationSerialTypeEnum.T526.getValue()){
+		if (inclinationConfig.getInclinationType() == InclinationConfigConstant.InclinationSerialTypeEnum.T526.getValue()) {
 			X = X;
 			Y = Y;
 		}
@@ -150,10 +149,10 @@ public class InclinationConfigServiceImpl extends ServiceImpl<InclinationConfigM
 
 	// 通过matlab计算初始倾斜角&方向角，以及X与Y
 	@Override
-	public ServerResponse<InclinationConfig> calInitWithMatlab(InclinationConfig inclinationConfig){
+	public ServerResponse<InclinationConfig> calInitWithMatlab(InclinationConfig inclinationConfig) {
 
 		// 1.数据校验
-		CheckDataUtil.checkData(inclinationConfig,"radius","initH1","initAngle1","initH2","initAngle2","initH3","initAngle3","initH4","initAngle4");
+		CheckDataUtil.checkData(inclinationConfig, "radius", "initH1", "initAngle1", "initH2", "initAngle2", "initH3", "initAngle3", "initH4", "initAngle4");
 
 		// 2.数据对应参数获取 顺序（1234 angle/h）
 		double R = inclinationConfig.getRadius();
@@ -171,10 +170,10 @@ public class InclinationConfigServiceImpl extends ServiceImpl<InclinationConfigM
 //		Double initY = (Double)matlabResult[3];
 
 
-		double initTotalAngle = ((MWNumericArray)matlabResult[0]).getDouble(1);
-		double initDirectAngle = ((MWNumericArray)matlabResult[1]).getDouble(1);
-		double initX = ((MWNumericArray)matlabResult[2]).getDouble(1);
-		double initY = ((MWNumericArray)matlabResult[3]).getDouble(1);
+		double initTotalAngle = ((MWNumericArray) matlabResult[0]).getDouble(1);
+		double initDirectAngle = ((MWNumericArray) matlabResult[1]).getDouble(1);
+		double initX = ((MWNumericArray) matlabResult[2]).getDouble(1);
+		double initY = ((MWNumericArray) matlabResult[3]).getDouble(1);
 
 		// 4.数据装填
 		InclinationConfig inclinationConfigInit = new InclinationConfig();

@@ -70,20 +70,20 @@ public class TestController {
 
 	@PostMapping("config.do")
 	@ResponseBody
-	public ServerResponse config(@RequestBody InclinationConfig inclinationConfig){
+	public ServerResponse config(@RequestBody InclinationConfig inclinationConfig) {
 		System.out.println(inclinationConfig);
 		return iInclinationConfigService.calXAndY(inclinationConfig);
 	}
 
 	@PostMapping("config_s.do")
 	@ResponseBody
-	public ServerResponse configS(@RequestBody InclinationConfig inclinationConfig){
+	public ServerResponse configS(@RequestBody InclinationConfig inclinationConfig) {
 		return iInclinationConfigService.calInitWithMatlab(inclinationConfig);
 	}
 
 	@GetMapping("index.do")
 	@ResponseBody
-	public String index(){
+	public String index() {
 		return "index";
 	}
 

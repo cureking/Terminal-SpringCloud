@@ -153,10 +153,10 @@ public class InclinationTotalServiceImpl extends ServiceImpl<InclinationTotalMap
 	}
 
 	@Override
-	public ServerResponse<List<InclinationTotal>> getLastByCount(Integer address, Integer count){
-		Wrapper<InclinationTotal> inclinationTotalWrapper = new QueryWrapper<InclinationTotal>().eq("inclination_id", address).orderByDesc("id").last("limit "+count.toString());
+	public ServerResponse<List<InclinationTotal>> getLastByCount(Integer address, Integer count) {
+		Wrapper<InclinationTotal> inclinationTotalWrapper = new QueryWrapper<InclinationTotal>().eq("inclination_id", address).orderByDesc("id").last("limit " + count.toString());
 		List<InclinationTotal> inclinationTotalList = this.list(inclinationTotalWrapper);
-		if (CollectionUtils.isEmpty(inclinationTotalList)){
+		if (CollectionUtils.isEmpty(inclinationTotalList)) {
 			return ServerResponse.createByError();
 		}
 		return ServerResponse.createBySuccess(inclinationTotalList);

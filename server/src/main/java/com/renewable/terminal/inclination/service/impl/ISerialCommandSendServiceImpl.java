@@ -8,6 +8,7 @@ import com.renewable.terminal.inclination.service.ISerialCommandSendService;
 import com.renewable.terminal.inclination.util.CheckDataUtil;
 import com.renewable.terminal.inclination.util.SerialPortUtil;
 import com.renewable.terminal.terminal.common.ServerResponse;
+import gnu.io.SerialPort;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -89,7 +90,14 @@ public class ISerialCommandSendServiceImpl implements ISerialCommandSendService 
 		// 4.调用命令origin发送命令
 		String portName = inclinationConfig.getPort();
 		int baudrate = inclinationConfig.getBaudrate();
-		ServerResponse serialSendResponse = serialSender.sendData(portName, baudrate, originData);
+
+		int parity = SerialPort.PARITY_NONE;
+		// 先在这里硬编码，后面有空整理一下（因为有些新想法）
+		if (inclinationType.equals("116T")){
+			parity = SerialPort.PARITY_EVEN;
+		}
+
+		ServerResponse serialSendResponse = serialSender.sendData(portName, baudrate, parity, originData);
 		if (serialSendResponse.isFail()) {
 			return serialSendResponse;
 		}
@@ -102,7 +110,7 @@ public class ISerialCommandSendServiceImpl implements ISerialCommandSendService 
 	public ServerResponse setZero(Integer inclinationConfigAddress, int type) {
 		// 1.校验数据
 		int count = iInclinationConfigService.count();
-		if (count == 0){
+		if (count == 0) {
 			return ServerResponse.createByErrorMessage("please input the config of inclination !");
 		}
 		InclinationConfig inclinationConfig = iInclinationConfigService.getById(inclinationConfigAddress);
@@ -123,7 +131,14 @@ public class ISerialCommandSendServiceImpl implements ISerialCommandSendService 
 		// 4.调用命令origin发送命令
 		String portName = inclinationConfig.getPort();
 		int baudrate = inclinationConfig.getBaudrate();
-		ServerResponse serialSendResponse = serialSender.sendData(portName, baudrate, originData);
+
+		int parity = SerialPort.PARITY_NONE;
+		// 先在这里硬编码，后面有空整理一下（因为有些新想法）
+		if (inclinationType.equals("116T")){
+			parity = SerialPort.PARITY_EVEN;
+		}
+
+		ServerResponse serialSendResponse = serialSender.sendData(portName, baudrate, parity, originData);
 		if (serialSendResponse.isFail()) {
 			return serialSendResponse;
 		}
@@ -153,7 +168,12 @@ public class ISerialCommandSendServiceImpl implements ISerialCommandSendService 
 		// 4.调用命令origin发送命令
 		String portName = inclinationConfig.getPort();
 		int baudrate = inclinationConfig.getBaudrate();
-		ServerResponse serialSendResponse = serialSender.sendData(portName, baudrate, originData);
+		int parity = SerialPort.PARITY_NONE;
+		// 先在这里硬编码，后面有空整理一下（因为有些新想法）
+		if (inclinationType.equals("116T")){
+			parity = SerialPort.PARITY_EVEN;
+		}
+		ServerResponse serialSendResponse = serialSender.sendData(portName, baudrate, parity, originData);
 		if (serialSendResponse.isFail()) {
 			return serialSendResponse;
 		}
@@ -178,7 +198,12 @@ public class ISerialCommandSendServiceImpl implements ISerialCommandSendService 
 		// 直接调用底层（不经过数据库）
 		byte[] originData = command2OriginStrategyContext.command2SetAddressOrigin(inclinationType, address, targetAddress);
 		// 4.调用命令origin发送命令
-		ServerResponse serialSendResponse = serialSender.sendData(portName, baudrate, originData);
+		int parity = SerialPort.PARITY_NONE;
+		// 先在这里硬编码，后面有空整理一下（因为有些新想法）
+		if (inclinationType.equals("116T")){
+			parity = SerialPort.PARITY_EVEN;
+		}
+		ServerResponse serialSendResponse = serialSender.sendData(portName, baudrate, parity, originData);
 		if (serialSendResponse.isFail()) {
 			return serialSendResponse;
 		}

@@ -33,7 +33,7 @@ public class Origin2Command826T implements Origin2Command {
 
 		int dataAreaStart = 4;
 
-		int[][] dataFormateArray = {{3,4},{3,4},{3,4}};
+		int[][] dataFormateArray = {{3, 4}, {3, 4}, {3, 4}};
 	}
 
 

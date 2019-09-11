@@ -37,6 +37,10 @@ public class Origin2CommandStrategyContext {
 		String command2OriginBeanName = String.format(ORIGIN2COMMAND_BEANNAME_PREFIX, inclinationType);
 
 		// 利用策略模式，返回对应的bean
+		if (!origin2CommandStrategyMap.containsKey(command2OriginBeanName)){
+//			log.warn
+			return;
+		}
 		origin2CommandStrategyMap.get(command2OriginBeanName).origin2Object(serialPort, originBuffer);
 	}
 

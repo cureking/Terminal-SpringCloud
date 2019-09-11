@@ -115,12 +115,14 @@ public class InclinationConfig implements Serializable {
 	 */
 	private Double initY;
 
-	/**\
+	/**
+	 * \
 	 * 安装方位角
 	 */
 	private Double installAngle;
 
-	/**\
+	/**
+	 * \
 	 * 安装模式（1.1，1.2，2.1，2.2）
 	 */
 	private Double installModel;

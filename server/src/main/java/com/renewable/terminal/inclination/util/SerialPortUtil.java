@@ -139,7 +139,10 @@ public class SerialPortUtil {
 			out.write(order);
 			out.flush();
 		} catch (IOException e) {
-			throw new SendDataToSerialPortFailure();
+
+			// 原先的异常处理违背了异常处理的原则，异常的处理并不是越底层越好。因为底层缺乏足够的判断信息，用于正确处理异常。
+			// 现在将异常处理时，将原先的异常堆栈，包含起来，抛到上层。
+			throw new SendDataToSerialPortFailure(e);
 		} finally {
 			try {
 				if (out != null) {
@@ -209,6 +212,41 @@ public class SerialPortUtil {
 		} catch (TooManyListenersException e) {
 			throw new TooManyListeners();
 		}
+	}
+
+	/**
+	 * 设置SerialPort的参数
+	 * 默认值：Baudrate,dataBits = 8,stopBits = 1,parity = 0
+	 * @param serialPort
+	 * @param bardrate
+	 * @param dataBits
+	 * @param stopBits
+	 * @param parity
+	 */
+	public static void setSerialPortParams(SerialPort serialPort, Integer bardrate, Integer dataBits, Integer stopBits, Integer parity){
+
+		// 只修改需要修改的属性
+		if (bardrate == null){
+			bardrate = serialPort.getBaudRate();
+		}
+		if (dataBits == null){
+			dataBits = serialPort.getDataBits();
+		}
+		if (stopBits == null){
+			stopBits = serialPort.getStopBits();
+		}
+		if (parity == null){
+			parity = serialPort.getParity();
+		}
+
+		// 设置必要属性
+		try {
+			serialPort.setSerialPortParams(bardrate,dataBits,stopBits,parity);
+		} catch (UnsupportedCommOperationException e) {
+			e.printStackTrace();
+		}
+
+		return;
 	}
 
 
