@@ -1,10 +1,10 @@
 # Terminal-SpringCloud
 
-[![AUR](https://img.shields.io/apm/l/vim-mode.svg)](https://github.com/cureking/centcontrol)
+[![AUR](https://img.shields.io/apm/l/vim-mode.svg)](https://github.com/cureking/Terminal-SpringCloud)
 [![](https://img.shields.io/badge/Author-Jarry-orange.svg)](https://www.cnblogs.com/Tiancheng-Duan/)
-[![](https://img.shields.io/badge/version-0.2-brightgreen.svg)](https://github.com/cureking/centcontrol)
-[![GitHub stars](https://img.shields.io/github/forks/cureking/centcontrol.svg?style=social&label=Stars)](https://github.com/cureking/centcontrol)
-[![GitHub forks](https://img.shields.io/github/forks/cureking/centcontrol.svg?style=social&label=Fork)](https://github.com/cureking/centcontrol)
+[![](https://img.shields.io/badge/version-0.2-brightgreen.svg)](https://github.com/cureking/Terminal-SpringCloud)
+[![GitHub stars](https://img.shields.io/github/forks/cureking/centcontrol.svg?style=social&label=Stars)](https://github.com/cureking/Terminal-SpringCloud)
+[![GitHub forks](https://img.shields.io/github/forks/cureking/centcontrol.svg?style=social&label=Fork)](https://github.com/cureking/Terminal-SpringCloud)
 
 瑞纽宝公司”工业物联网“项目的子项目-终端服务器（SpringCloud版本）
 
